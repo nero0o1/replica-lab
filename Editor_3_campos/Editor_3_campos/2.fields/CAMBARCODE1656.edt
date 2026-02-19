@@ -1,0 +1,197 @@
+{
+  "name" : "Botão de código de Barras",
+  "identifier" : "BOTAO_DE_CODIGO_DE_BARRAS",
+  "type" : "CAM",
+  "code" : 119878,
+  "group" : {
+    "id" : 2342,
+    "name" : "Editor_3_campos",
+    "itemType" : {
+      "id" : 6,
+      "identifier" : "G_CAM",
+      "description" : "Grupo dos Campos",
+      "permissionModifyGroup" : true
+    },
+    "keyTranslate" : null,
+    "parentGroup" : {
+      "id" : 1,
+      "name" : "Repositório Local",
+      "itemType" : {
+        "id" : 3,
+        "identifier" : "R_REP_CAM",
+        "description" : "Raiz dos Repositórios dos Campos",
+        "permissionModifyGroup" : false
+      },
+      "keyTranslate" : null,
+      "parentGroup" : null,
+      "fieldsOnGroup" : null,
+      "editable" : false
+    },
+    "fieldsOnGroup" : 16,
+    "editable" : true
+  },
+  "active" : true,
+  "data" : {
+    "id" : 119878,
+    "name" : "Botão de código de Barras",
+    "itemType" : {
+      "id" : 8,
+      "identifier" : "CAM",
+      "description" : "Campo",
+      "permissionModifyGroup" : true
+    },
+    "visualizationType" : {
+      "id" : 8,
+      "identifier" : "BARCODE",
+      "description" : "Código de Barras"
+    },
+    "identifier" : "BOTAO_DE_CODIGO_DE_BARRAS",
+    "reprocessed" : false,
+    "active" : true,
+    "sourceCopyId" : null,
+    "defaultTexts" : [ ],
+    "hash" : "b2cdf8518906a73894943bbe9f28ad62",
+    "fieldParentIdentifier" : null,
+    "booleanType" : false,
+    "fieldParentId" : null,
+    "versionId" : null,
+    "tabIndex" : false,
+    "list" : false,
+    "groupId" : 2342
+  },
+  "visualizationType" : "BARCODE",
+  "fieldPropertyValues" : [ {
+    "id" : 944153,
+    "property" : {
+      "id" : 38,
+      "identifier" : "cascata_de_regra",
+      "description" : "Cascata de Regra",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rule.cascade"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944161,
+    "property" : {
+      "id" : 4,
+      "identifier" : "acao",
+      "description" : "Ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.action"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944155,
+    "property" : {
+      "id" : 5,
+      "identifier" : "usado_em",
+      "description" : "Usado em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.used.in"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944154,
+    "property" : {
+      "id" : 8,
+      "identifier" : "obrigatorio",
+      "description" : "Obrigatório",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.required"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944156,
+    "property" : {
+      "id" : 10,
+      "identifier" : "criado_por",
+      "description" : "Criado Por",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.by"
+    },
+    "value" : "SES50002",
+    "hash" : "50c9232a38b75f85272aa587047434be"
+  }, {
+    "id" : 944157,
+    "property" : {
+      "id" : 17,
+      "identifier" : "reprocessar",
+      "description" : "Reprocessar ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.reprocessed.action"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944159,
+    "property" : {
+      "id" : 19,
+      "identifier" : "barcode_type",
+      "description" : "Tipo Código de Barra",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.type.bar.code"
+    },
+    "value" : "CODE_93",
+    "hash" : "e5515801e4a3372895a87bc74ba49398"
+  }, {
+    "id" : 944160,
+    "property" : {
+      "id" : 20,
+      "identifier" : "show_barcode_label",
+      "description" : "Exibir Label",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.show.label"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944158,
+    "property" : {
+      "id" : 22,
+      "identifier" : "regras_usadas",
+      "description" : "Regra(s)",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rules"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944163,
+    "property" : {
+      "id" : 24,
+      "identifier" : "criado_em",
+      "description" : "Criado Em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.in"
+    },
+    "value" : "2026-02-19 00:12:04",
+    "hash" : "442b080f877d77e69d94a191164e3670"
+  }, {
+    "id" : 944162,
+    "property" : {
+      "id" : 33,
+      "identifier" : "importado",
+      "description" : "Importado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.imported"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944164,
+    "property" : {
+      "id" : 34,
+      "identifier" : "migrado",
+      "description" : "Migrado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.migrated"
+    },
+    "value" : null,
+    "hash" : null
+  } ],
+  "fieldValues" : [ ]
+}

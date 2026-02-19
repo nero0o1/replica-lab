@@ -1,0 +1,230 @@
+{
+  "name" : "Ponto de rádio",
+  "identifier" : "PONTO_DE_RADIO",
+  "type" : "CAM",
+  "code" : 119899,
+  "group" : {
+    "id" : 2342,
+    "name" : "Editor_3_campos",
+    "itemType" : {
+      "id" : 6,
+      "identifier" : "G_CAM",
+      "description" : "Grupo dos Campos",
+      "permissionModifyGroup" : true
+    },
+    "keyTranslate" : null,
+    "parentGroup" : {
+      "id" : 1,
+      "name" : "Repositório Local",
+      "itemType" : {
+        "id" : 3,
+        "identifier" : "R_REP_CAM",
+        "description" : "Raiz dos Repositórios dos Campos",
+        "permissionModifyGroup" : false
+      },
+      "keyTranslate" : null,
+      "parentGroup" : null,
+      "fieldsOnGroup" : null,
+      "editable" : false
+    },
+    "fieldsOnGroup" : 16,
+    "editable" : true
+  },
+  "active" : true,
+  "data" : {
+    "id" : 119899,
+    "name" : "Ponto de rádio",
+    "itemType" : {
+      "id" : 8,
+      "identifier" : "CAM",
+      "description" : "Campo",
+      "permissionModifyGroup" : true
+    },
+    "visualizationType" : {
+      "id" : 6,
+      "identifier" : "RADIOBUTTON",
+      "description" : "Radio Button"
+    },
+    "identifier" : "PONTO_DE_RADIO",
+    "reprocessed" : false,
+    "active" : true,
+    "sourceCopyId" : null,
+    "defaultTexts" : [ ],
+    "hash" : "115fdb250741ab76eed53fc1b38b3e86",
+    "fieldParentIdentifier" : null,
+    "booleanType" : false,
+    "fieldParentId" : null,
+    "versionId" : null,
+    "tabIndex" : true,
+    "list" : false,
+    "groupId" : 2342
+  },
+  "visualizationType" : "RADIOBUTTON",
+  "fieldPropertyValues" : [ {
+    "id" : 944396,
+    "property" : {
+      "id" : 38,
+      "identifier" : "cascata_de_regra",
+      "description" : "Cascata de Regra",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rule.cascade"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944401,
+    "property" : {
+      "id" : 4,
+      "identifier" : "acao",
+      "description" : "Ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.action"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944397,
+    "property" : {
+      "id" : 5,
+      "identifier" : "usado_em",
+      "description" : "Usado em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.used.in"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944403,
+    "property" : {
+      "id" : 7,
+      "identifier" : "editavel",
+      "description" : "Editável",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.editable"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944409,
+    "property" : {
+      "id" : 8,
+      "identifier" : "obrigatorio",
+      "description" : "Obrigatório",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.required"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944399,
+    "property" : {
+      "id" : 9,
+      "identifier" : "valor_inicial",
+      "description" : "Valor Inicial",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.initial.value"
+    },
+    "value" : "false",
+    "hash" : "68934a3e9455fa72420237eb05902327"
+  }, {
+    "id" : 944402,
+    "property" : {
+      "id" : 10,
+      "identifier" : "criado_por",
+      "description" : "Criado Por",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.by"
+    },
+    "value" : "SES50002",
+    "hash" : "50c9232a38b75f85272aa587047434be"
+  }, {
+    "id" : 944400,
+    "property" : {
+      "id" : 17,
+      "identifier" : "reprocessar",
+      "description" : "Reprocessar ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.reprocessed.action"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944398,
+    "property" : {
+      "id" : 22,
+      "identifier" : "regras_usadas",
+      "description" : "Regra(s)",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rules"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944408,
+    "property" : {
+      "id" : 24,
+      "identifier" : "criado_em",
+      "description" : "Criado Em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.in"
+    },
+    "value" : "2026-02-19 00:08:00",
+    "hash" : "3690bd34c5ca5658ee46d5de55670711"
+  }, {
+    "id" : 944404,
+    "property" : {
+      "id" : 29,
+      "identifier" : "expor_para_api",
+      "description" : "Expor para API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.export.api"
+    },
+    "value" : "false",
+    "hash" : "68934a3e9455fa72420237eb05902327"
+  }, {
+    "id" : 944405,
+    "property" : {
+      "id" : 30,
+      "identifier" : "hint",
+      "description" : "Hint",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.hiny"
+    },
+    "value" : "Ponto de rádio",
+    "hash" : "77e7e98bacc6f79d2c7e532f312d0cd2"
+  }, {
+    "id" : 944406,
+    "property" : {
+      "id" : 31,
+      "identifier" : "descricao_api",
+      "description" : "Descrição API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.description.api"
+    },
+    "value" : "PONTO_DE_RADIO",
+    "hash" : "2f78561aa636011ab0854431eddcb2b6"
+  }, {
+    "id" : 944407,
+    "property" : {
+      "id" : 33,
+      "identifier" : "importado",
+      "description" : "Importado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.imported"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944410,
+    "property" : {
+      "id" : 34,
+      "identifier" : "migrado",
+      "description" : "Migrado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.migrated"
+    },
+    "value" : null,
+    "hash" : null
+  } ],
+  "fieldValues" : [ ]
+}

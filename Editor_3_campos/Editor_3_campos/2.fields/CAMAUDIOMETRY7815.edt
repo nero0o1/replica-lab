@@ -1,0 +1,142 @@
+{
+  "name" : "Campo de Audiometria",
+  "identifier" : "CAMPO_DE_AUDIOMETRIA",
+  "type" : "CAM",
+  "code" : 119884,
+  "group" : {
+    "id" : 2342,
+    "name" : "Editor_3_campos",
+    "itemType" : {
+      "id" : 6,
+      "identifier" : "G_CAM",
+      "description" : "Grupo dos Campos",
+      "permissionModifyGroup" : true
+    },
+    "keyTranslate" : null,
+    "parentGroup" : {
+      "id" : 1,
+      "name" : "Repositório Local",
+      "itemType" : {
+        "id" : 3,
+        "identifier" : "R_REP_CAM",
+        "description" : "Raiz dos Repositórios dos Campos",
+        "permissionModifyGroup" : false
+      },
+      "keyTranslate" : null,
+      "parentGroup" : null,
+      "fieldsOnGroup" : null,
+      "editable" : false
+    },
+    "fieldsOnGroup" : 16,
+    "editable" : true
+  },
+  "active" : true,
+  "data" : {
+    "id" : 119884,
+    "name" : "Campo de Audiometria",
+    "itemType" : {
+      "id" : 8,
+      "identifier" : "CAM",
+      "description" : "Campo",
+      "permissionModifyGroup" : true
+    },
+    "visualizationType" : {
+      "id" : 36,
+      "identifier" : "AUDIOMETRY",
+      "description" : "Audiometria"
+    },
+    "identifier" : "CAMPO_DE_AUDIOMETRIA",
+    "reprocessed" : false,
+    "active" : true,
+    "sourceCopyId" : null,
+    "defaultTexts" : [ ],
+    "hash" : "d7020db6608006b0ec9c4f1cf19e3810",
+    "fieldParentIdentifier" : null,
+    "booleanType" : false,
+    "fieldParentId" : null,
+    "versionId" : null,
+    "tabIndex" : true,
+    "list" : false,
+    "groupId" : 2342
+  },
+  "visualizationType" : "AUDIOMETRY",
+  "fieldPropertyValues" : [ {
+    "id" : 944238,
+    "property" : {
+      "id" : 5,
+      "identifier" : "usado_em",
+      "description" : "Usado em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.used.in"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944239,
+    "property" : {
+      "id" : 10,
+      "identifier" : "criado_por",
+      "description" : "Criado Por",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.by"
+    },
+    "value" : "SES50002",
+    "hash" : "50c9232a38b75f85272aa587047434be"
+  }, {
+    "id" : 944244,
+    "property" : {
+      "id" : 22,
+      "identifier" : "regras_usadas",
+      "description" : "Regra(s)",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rules"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944240,
+    "property" : {
+      "id" : 24,
+      "identifier" : "criado_em",
+      "description" : "Criado Em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.in"
+    },
+    "value" : "2026-02-19 00:26:50",
+    "hash" : "c86ae7e3efa1fe3aaed6ff19b113d620"
+  }, {
+    "id" : 944241,
+    "property" : {
+      "id" : 30,
+      "identifier" : "hint",
+      "description" : "Hint",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.hiny"
+    },
+    "value" : "Campo de Audiometria",
+    "hash" : "1d1e0c7f8606cb8467454604f6706aed"
+  }, {
+    "id" : 944242,
+    "property" : {
+      "id" : 33,
+      "identifier" : "importado",
+      "description" : "Importado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.imported"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944243,
+    "property" : {
+      "id" : 34,
+      "identifier" : "migrado",
+      "description" : "Migrado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.migrated"
+    },
+    "value" : null,
+    "hash" : null
+  } ],
+  "fieldValues" : [ ]
+}

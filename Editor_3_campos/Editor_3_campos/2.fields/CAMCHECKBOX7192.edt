@@ -1,0 +1,230 @@
+{
+  "name" : "Campo de tabela dinâmica",
+  "identifier" : "CAMPO_DE_TABELA_DINAMICA",
+  "type" : "CAM",
+  "code" : 119881,
+  "group" : {
+    "id" : 2342,
+    "name" : "Editor_3_campos",
+    "itemType" : {
+      "id" : 6,
+      "identifier" : "G_CAM",
+      "description" : "Grupo dos Campos",
+      "permissionModifyGroup" : true
+    },
+    "keyTranslate" : null,
+    "parentGroup" : {
+      "id" : 1,
+      "name" : "Repositório Local",
+      "itemType" : {
+        "id" : 3,
+        "identifier" : "R_REP_CAM",
+        "description" : "Raiz dos Repositórios dos Campos",
+        "permissionModifyGroup" : false
+      },
+      "keyTranslate" : null,
+      "parentGroup" : null,
+      "fieldsOnGroup" : null,
+      "editable" : false
+    },
+    "fieldsOnGroup" : 16,
+    "editable" : true
+  },
+  "active" : true,
+  "data" : {
+    "id" : 119881,
+    "name" : "Campo de tabela dinâmica",
+    "itemType" : {
+      "id" : 8,
+      "identifier" : "CAM",
+      "description" : "Campo",
+      "permissionModifyGroup" : true
+    },
+    "visualizationType" : {
+      "id" : 4,
+      "identifier" : "CHECKBOX",
+      "description" : "CheckBox"
+    },
+    "identifier" : "CAMPO_DE_TABELA_DINAMICA",
+    "reprocessed" : false,
+    "active" : true,
+    "sourceCopyId" : null,
+    "defaultTexts" : [ ],
+    "hash" : "bc0d8301ad4c67a05e0d0613250f3fcc",
+    "fieldParentIdentifier" : null,
+    "booleanType" : true,
+    "fieldParentId" : null,
+    "versionId" : null,
+    "tabIndex" : true,
+    "list" : false,
+    "groupId" : 2342
+  },
+  "visualizationType" : "CHECKBOX",
+  "fieldPropertyValues" : [ {
+    "id" : 944202,
+    "property" : {
+      "id" : 38,
+      "identifier" : "cascata_de_regra",
+      "description" : "Cascata de Regra",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rule.cascade"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944204,
+    "property" : {
+      "id" : 4,
+      "identifier" : "acao",
+      "description" : "Ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.action"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944209,
+    "property" : {
+      "id" : 5,
+      "identifier" : "usado_em",
+      "description" : "Usado em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.used.in"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944210,
+    "property" : {
+      "id" : 7,
+      "identifier" : "editavel",
+      "description" : "Editável",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.editable"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944203,
+    "property" : {
+      "id" : 8,
+      "identifier" : "obrigatorio",
+      "description" : "Obrigatório",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.required"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944205,
+    "property" : {
+      "id" : 9,
+      "identifier" : "valor_inicial",
+      "description" : "Valor Inicial",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.initial.value"
+    },
+    "value" : "false",
+    "hash" : "68934a3e9455fa72420237eb05902327"
+  }, {
+    "id" : 944207,
+    "property" : {
+      "id" : 10,
+      "identifier" : "criado_por",
+      "description" : "Criado Por",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.by"
+    },
+    "value" : "SES50002",
+    "hash" : "50c9232a38b75f85272aa587047434be"
+  }, {
+    "id" : 944208,
+    "property" : {
+      "id" : 17,
+      "identifier" : "reprocessar",
+      "description" : "Reprocessar ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.reprocessed.action"
+    },
+    "value" : "false",
+    "hash" : "68934a3e9455fa72420237eb05902327"
+  }, {
+    "id" : 944206,
+    "property" : {
+      "id" : 22,
+      "identifier" : "regras_usadas",
+      "description" : "Regra(s)",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rules"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944215,
+    "property" : {
+      "id" : 24,
+      "identifier" : "criado_em",
+      "description" : "Criado Em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.in"
+    },
+    "value" : "2026-02-19 00:18:51",
+    "hash" : "e89c57f2e3df568562d13871b70aa3ca"
+  }, {
+    "id" : 944211,
+    "property" : {
+      "id" : 29,
+      "identifier" : "expor_para_api",
+      "description" : "Expor para API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.export.api"
+    },
+    "value" : "false",
+    "hash" : "68934a3e9455fa72420237eb05902327"
+  }, {
+    "id" : 944212,
+    "property" : {
+      "id" : 30,
+      "identifier" : "hint",
+      "description" : "Hint",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.hiny"
+    },
+    "value" : "Campo de tabela dinâmica",
+    "hash" : "a99e2be468efb4d3bc8bbafa48db1e16"
+  }, {
+    "id" : 944213,
+    "property" : {
+      "id" : 31,
+      "identifier" : "descricao_api",
+      "description" : "Descrição API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.description.api"
+    },
+    "value" : "CAMPO_DE_TABELA_DINAMICA",
+    "hash" : "e4b224141e1444c53f2c670e13e6ef82"
+  }, {
+    "id" : 944214,
+    "property" : {
+      "id" : 33,
+      "identifier" : "importado",
+      "description" : "Importado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.imported"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944216,
+    "property" : {
+      "id" : 34,
+      "identifier" : "migrado",
+      "description" : "Migrado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.migrated"
+    },
+    "value" : null,
+    "hash" : null
+  } ],
+  "fieldValues" : [ ]
+}

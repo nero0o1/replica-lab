@@ -1,0 +1,17 @@
+10_work/
+11_unpack/
+20_outputs/
+.vscode/
+.idea/
+__pycache__/
+.venv/
+venv/
+*.pyc
+dist/
+build/
+out/
+node_modules/
+coverage/
+.cache/
+tmp/
+*.log

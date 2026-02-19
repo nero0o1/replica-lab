@@ -1,0 +1,311 @@
+{
+  "name" : "Campo de texto",
+  "identifier" : "CAMPO_DE_TEXTO",
+  "type" : "CAM",
+  "code" : 119876,
+  "group" : {
+    "id" : 2342,
+    "name" : "Editor_3_campos",
+    "itemType" : {
+      "id" : 6,
+      "identifier" : "G_CAM",
+      "description" : "Grupo dos Campos",
+      "permissionModifyGroup" : true
+    },
+    "keyTranslate" : null,
+    "parentGroup" : {
+      "id" : 1,
+      "name" : "Repositório Local",
+      "itemType" : {
+        "id" : 3,
+        "identifier" : "R_REP_CAM",
+        "description" : "Raiz dos Repositórios dos Campos",
+        "permissionModifyGroup" : false
+      },
+      "keyTranslate" : null,
+      "parentGroup" : null,
+      "fieldsOnGroup" : null,
+      "editable" : false
+    },
+    "fieldsOnGroup" : 16,
+    "editable" : true
+  },
+  "active" : true,
+  "data" : {
+    "id" : 119876,
+    "name" : "Campo de texto",
+    "itemType" : {
+      "id" : 8,
+      "identifier" : "CAM",
+      "description" : "Campo",
+      "permissionModifyGroup" : true
+    },
+    "visualizationType" : {
+      "id" : 1,
+      "identifier" : "TEXT",
+      "description" : "Texto"
+    },
+    "identifier" : "CAMPO_DE_TEXTO",
+    "reprocessed" : false,
+    "active" : true,
+    "sourceCopyId" : null,
+    "defaultTexts" : [ {
+      "id" : 24921,
+      "name" : "Exemplo1\nUm exemplo",
+      "companyId" : 14
+    } ],
+    "hash" : "41cd16d2e2744dd2fba78cc06de54107",
+    "fieldParentIdentifier" : null,
+    "booleanType" : false,
+    "fieldParentId" : null,
+    "versionId" : null,
+    "tabIndex" : true,
+    "list" : false,
+    "groupId" : 2342
+  },
+  "visualizationType" : "TEXT",
+  "fieldPropertyValues" : [ {
+    "id" : 944121,
+    "property" : {
+      "id" : 38,
+      "identifier" : "cascata_de_regra",
+      "description" : "Cascata de Regra",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rule.cascade"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944134,
+    "property" : {
+      "id" : 1,
+      "identifier" : "tamanho",
+      "description" : "Tamanho",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.size"
+    },
+    "value" : "200",
+    "hash" : "3644a684f98ea8fe223c713b77189a77"
+  }, {
+    "id" : 944123,
+    "property" : {
+      "id" : 3,
+      "identifier" : "mascara",
+      "description" : "Máscara",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.mask"
+    },
+    "value" : "TEXT",
+    "hash" : "61a96ffcb251bb9bf0abf8fec19d0ea8"
+  }, {
+    "id" : 944122,
+    "property" : {
+      "id" : 4,
+      "identifier" : "acao",
+      "description" : "Ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.action"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944132,
+    "property" : {
+      "id" : 5,
+      "identifier" : "usado_em",
+      "description" : "Usado em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.used.in"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944129,
+    "property" : {
+      "id" : 7,
+      "identifier" : "editavel",
+      "description" : "Editável",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.editable"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944128,
+    "property" : {
+      "id" : 8,
+      "identifier" : "obrigatorio",
+      "description" : "Obrigatório",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.required"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944127,
+    "property" : {
+      "id" : 9,
+      "identifier" : "valor_inicial",
+      "description" : "Valor Inicial",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.initial.value"
+    },
+    "value" : "1",
+    "hash" : "c4ca4238a0b923820dcc509a6f75849b"
+  }, {
+    "id" : 944126,
+    "property" : {
+      "id" : 10,
+      "identifier" : "criado_por",
+      "description" : "Criado Por",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.by"
+    },
+    "value" : "SES50002",
+    "hash" : "50c9232a38b75f85272aa587047434be"
+  }, {
+    "id" : 944125,
+    "property" : {
+      "id" : 13,
+      "identifier" : "acao_texto_padrao",
+      "description" : "Ação do texto padrão",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.default.text.action"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944124,
+    "property" : {
+      "id" : 14,
+      "identifier" : "texto_padrao",
+      "description" : "Texto Padrão",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.default.text"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944133,
+    "property" : {
+      "id" : 15,
+      "identifier" : "parametros_texto_padrao",
+      "description" : "Parâmetros do texto padrão",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.parameter.default.text"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944130,
+    "property" : {
+      "id" : 17,
+      "identifier" : "reprocessar",
+      "description" : "Reprocessar ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.reprocessed.action"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944131,
+    "property" : {
+      "id" : 22,
+      "identifier" : "regras_usadas",
+      "description" : "Regra(s)",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rules"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944140,
+    "property" : {
+      "id" : 24,
+      "identifier" : "criado_em",
+      "description" : "Criado Em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.in"
+    },
+    "value" : "2026-02-18 23:50:09",
+    "hash" : "cca6b847833abc9e7a58d6d7f87df54f"
+  }, {
+    "id" : 944135,
+    "property" : {
+      "id" : 29,
+      "identifier" : "expor_para_api",
+      "description" : "Expor para API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.export.api"
+    },
+    "value" : "false",
+    "hash" : "68934a3e9455fa72420237eb05902327"
+  }, {
+    "id" : 944136,
+    "property" : {
+      "id" : 30,
+      "identifier" : "hint",
+      "description" : "Hint",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.hiny"
+    },
+    "value" : "Campo de texto",
+    "hash" : "71d6d7f28e071e9196668756f9e40b31"
+  }, {
+    "id" : 944137,
+    "property" : {
+      "id" : 31,
+      "identifier" : "descricao_api",
+      "description" : "Descrição API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.description.api"
+    },
+    "value" : "CAMPO_DE_TEXTO",
+    "hash" : "28f18f957e5d4a80a8ef7d7a642eeed7"
+  }, {
+    "id" : 944138,
+    "property" : {
+      "id" : 32,
+      "identifier" : "tipo_moeda",
+      "description" : "Tipo Moeda",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.type.currency"
+    },
+    "value" : "REAL",
+    "hash" : "8cf125b0e31559ba75a9d9b4f818a554"
+  }, {
+    "id" : 944139,
+    "property" : {
+      "id" : 33,
+      "identifier" : "importado",
+      "description" : "Importado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.imported"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944142,
+    "property" : {
+      "id" : 34,
+      "identifier" : "migrado",
+      "description" : "Migrado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.migrated"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944141,
+    "property" : {
+      "id" : 36,
+      "identifier" : "requisicao_api",
+      "description" : "Requisição API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.api.request"
+    },
+    "value" : null,
+    "hash" : null
+  } ],
+  "fieldValues" : [ ]
+}

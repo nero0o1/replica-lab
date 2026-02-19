@@ -1,0 +1,13 @@
+REPLICA LAB - DOCUMENTAÇÃO NOTEBOOKLM
+======================================
+
+Este diretório contém relatórios estruturados para análise por IA (RAG/NotebookLM).
+
+ARQUIVOS:
+1. 01_Arquitetura_Visao_Geral.md    -> Estrutura técnica, pastas e entry points.
+2. 02_Fluxo_de_Dados_e_Logica.md    -> Como o dado viaja (Loader -> Canonical -> Drivers).
+3. 03_Dependencias_e_Seguranca.md   -> Bibliotecas, Criptografia (MD5) e Validações.
+4. 04_Guia_de_Reconstrucao.md       -> Histórico de decisões e ordem de construção.
+
+INSTRUÇÕES DE USO:
+Faça upload destes 4 arquivos .md no Google NotebookLM para obter uma base de conhecimento completa sobre o funcionamento interno do "Replica Editor Hybrid Core".

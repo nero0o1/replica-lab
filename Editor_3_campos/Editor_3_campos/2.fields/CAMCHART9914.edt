@@ -1,0 +1,208 @@
+{
+  "name" : "Campo de gráfico",
+  "identifier" : "CAMPO_DE_GRAFICO",
+  "type" : "CAM",
+  "code" : 119902,
+  "group" : {
+    "id" : 2342,
+    "name" : "Editor_3_campos",
+    "itemType" : {
+      "id" : 6,
+      "identifier" : "G_CAM",
+      "description" : "Grupo dos Campos",
+      "permissionModifyGroup" : true
+    },
+    "keyTranslate" : null,
+    "parentGroup" : {
+      "id" : 1,
+      "name" : "Repositório Local",
+      "itemType" : {
+        "id" : 3,
+        "identifier" : "R_REP_CAM",
+        "description" : "Raiz dos Repositórios dos Campos",
+        "permissionModifyGroup" : false
+      },
+      "keyTranslate" : null,
+      "parentGroup" : null,
+      "fieldsOnGroup" : null,
+      "editable" : false
+    },
+    "fieldsOnGroup" : 16,
+    "editable" : true
+  },
+  "active" : true,
+  "data" : {
+    "id" : 119902,
+    "name" : "Campo de gráfico",
+    "itemType" : {
+      "id" : 8,
+      "identifier" : "CAM",
+      "description" : "Campo",
+      "permissionModifyGroup" : true
+    },
+    "visualizationType" : {
+      "id" : 26,
+      "identifier" : "CHART",
+      "description" : "Gráfico"
+    },
+    "identifier" : "CAMPO_DE_GRAFICO",
+    "reprocessed" : false,
+    "active" : true,
+    "sourceCopyId" : null,
+    "defaultTexts" : [ ],
+    "hash" : "8edc16ae89a4c9f440cced21c2a68b90",
+    "fieldParentIdentifier" : null,
+    "booleanType" : false,
+    "fieldParentId" : null,
+    "versionId" : null,
+    "tabIndex" : true,
+    "list" : false,
+    "groupId" : 2342
+  },
+  "visualizationType" : "CHART",
+  "fieldPropertyValues" : [ {
+    "id" : 944429,
+    "property" : {
+      "id" : 38,
+      "identifier" : "cascata_de_regra",
+      "description" : "Cascata de Regra",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rule.cascade"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944430,
+    "property" : {
+      "id" : 40,
+      "identifier" : "min_do_grafico",
+      "description" : "Mínimo do Gráfico",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.chart.min"
+    },
+    "value" : "12",
+    "hash" : "c20ad4d76fe97759aa27a0c99bff6710"
+  }, {
+    "id" : 944431,
+    "property" : {
+      "id" : 41,
+      "identifier" : "max_do_grafico",
+      "description" : "Máximo do Gráfico",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.chart.max"
+    },
+    "value" : "1134",
+    "hash" : "7c9d0b1f96aebd7b5eca8c3edaa19ebb"
+  }, {
+    "id" : 944432,
+    "property" : {
+      "id" : 4,
+      "identifier" : "acao",
+      "description" : "Ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.action"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944433,
+    "property" : {
+      "id" : 5,
+      "identifier" : "usado_em",
+      "description" : "Usado em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.used.in"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944434,
+    "property" : {
+      "id" : 10,
+      "identifier" : "criado_por",
+      "description" : "Criado Por",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.by"
+    },
+    "value" : "SES50002",
+    "hash" : "50c9232a38b75f85272aa587047434be"
+  }, {
+    "id" : 944441,
+    "property" : {
+      "id" : 17,
+      "identifier" : "reprocessar",
+      "description" : "Reprocessar ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.reprocessed.action"
+    },
+    "value" : "false",
+    "hash" : "68934a3e9455fa72420237eb05902327"
+  }, {
+    "id" : 944435,
+    "property" : {
+      "id" : 22,
+      "identifier" : "regras_usadas",
+      "description" : "Regra(s)",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rules"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944436,
+    "property" : {
+      "id" : 24,
+      "identifier" : "criado_em",
+      "description" : "Criado Em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.in"
+    },
+    "value" : "2026-02-19 00:19:24",
+    "hash" : "8c3ae573f4ce3c033cbaf4d0f04b5dcf"
+  }, {
+    "id" : 944437,
+    "property" : {
+      "id" : 30,
+      "identifier" : "hint",
+      "description" : "Hint",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.hiny"
+    },
+    "value" : "Campo de gráfico",
+    "hash" : "aae07faff5d40f7cfae5354d953d878e"
+  }, {
+    "id" : 944438,
+    "property" : {
+      "id" : 33,
+      "identifier" : "importado",
+      "description" : "Importado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.imported"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944440,
+    "property" : {
+      "id" : 34,
+      "identifier" : "migrado",
+      "description" : "Migrado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.migrated"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944439,
+    "property" : {
+      "id" : 35,
+      "identifier" : "tipo_do_grafico",
+      "description" : "Tipo do Gráfico",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.chart.type"
+    },
+    "value" : "BAR",
+    "hash" : "3d75eec709b70a350e143492192a1736"
+  } ],
+  "fieldValues" : [ ]
+}

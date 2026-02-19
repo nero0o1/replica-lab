@@ -1,0 +1,307 @@
+{
+  "name" : "Campo de texto formatado",
+  "identifier" : "CAMPO_DE_TEXTO_FORMATADO",
+  "type" : "CAM",
+  "code" : 119880,
+  "group" : {
+    "id" : 2342,
+    "name" : "Editor_3_campos",
+    "itemType" : {
+      "id" : 6,
+      "identifier" : "G_CAM",
+      "description" : "Grupo dos Campos",
+      "permissionModifyGroup" : true
+    },
+    "keyTranslate" : null,
+    "parentGroup" : {
+      "id" : 1,
+      "name" : "Repositório Local",
+      "itemType" : {
+        "id" : 3,
+        "identifier" : "R_REP_CAM",
+        "description" : "Raiz dos Repositórios dos Campos",
+        "permissionModifyGroup" : false
+      },
+      "keyTranslate" : null,
+      "parentGroup" : null,
+      "fieldsOnGroup" : null,
+      "editable" : false
+    },
+    "fieldsOnGroup" : 16,
+    "editable" : true
+  },
+  "active" : true,
+  "data" : {
+    "id" : 119880,
+    "name" : "Campo de texto formatado",
+    "itemType" : {
+      "id" : 8,
+      "identifier" : "CAM",
+      "description" : "Campo",
+      "permissionModifyGroup" : true
+    },
+    "visualizationType" : {
+      "id" : 12,
+      "identifier" : "FORMATTEDTEXT",
+      "description" : "Texto Formatado"
+    },
+    "identifier" : "CAMPO_DE_TEXTO_FORMATADO",
+    "reprocessed" : false,
+    "active" : true,
+    "sourceCopyId" : null,
+    "defaultTexts" : [ ],
+    "hash" : "ce6f59cc65b86340df30a399776bba41",
+    "fieldParentIdentifier" : null,
+    "booleanType" : false,
+    "fieldParentId" : null,
+    "versionId" : null,
+    "tabIndex" : true,
+    "list" : false,
+    "groupId" : 2342
+  },
+  "visualizationType" : "FORMATTEDTEXT",
+  "fieldPropertyValues" : [ {
+    "id" : 944180,
+    "property" : {
+      "id" : 38,
+      "identifier" : "cascata_de_regra",
+      "description" : "Cascata de Regra",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rule.cascade"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944181,
+    "property" : {
+      "id" : 1,
+      "identifier" : "tamanho",
+      "description" : "Tamanho",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.size"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944182,
+    "property" : {
+      "id" : 2,
+      "identifier" : "lista_valores",
+      "description" : "Lista de Valores",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.list.values"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944183,
+    "property" : {
+      "id" : 3,
+      "identifier" : "mascara",
+      "description" : "Máscara",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.mask"
+    },
+    "value" : "NUMBER",
+    "hash" : "34f55eca38e0605a84f169ff61a2a396"
+  }, {
+    "id" : 944184,
+    "property" : {
+      "id" : 4,
+      "identifier" : "acao",
+      "description" : "Ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.action"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944186,
+    "property" : {
+      "id" : 5,
+      "identifier" : "usado_em",
+      "description" : "Usado em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.used.in"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944189,
+    "property" : {
+      "id" : 7,
+      "identifier" : "editavel",
+      "description" : "Editável",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.editable"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944194,
+    "property" : {
+      "id" : 8,
+      "identifier" : "obrigatorio",
+      "description" : "Obrigatório",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.required"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944193,
+    "property" : {
+      "id" : 9,
+      "identifier" : "valor_inicial",
+      "description" : "Valor Inicial",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.initial.value"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944192,
+    "property" : {
+      "id" : 10,
+      "identifier" : "criado_por",
+      "description" : "Criado Por",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.by"
+    },
+    "value" : "SES50002",
+    "hash" : "50c9232a38b75f85272aa587047434be"
+  }, {
+    "id" : 944191,
+    "property" : {
+      "id" : 13,
+      "identifier" : "acao_texto_padrao",
+      "description" : "Ação do texto padrão",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.default.text.action"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944190,
+    "property" : {
+      "id" : 14,
+      "identifier" : "texto_padrao",
+      "description" : "Texto Padrão",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.default.text"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944188,
+    "property" : {
+      "id" : 15,
+      "identifier" : "parametros_texto_padrao",
+      "description" : "Parâmetros do texto padrão",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.parameter.default.text"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944187,
+    "property" : {
+      "id" : 17,
+      "identifier" : "reprocessar",
+      "description" : "Reprocessar ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.reprocessed.action"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944185,
+    "property" : {
+      "id" : 22,
+      "identifier" : "regras_usadas",
+      "description" : "Regra(s)",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rules"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944199,
+    "property" : {
+      "id" : 24,
+      "identifier" : "criado_em",
+      "description" : "Criado Em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.in"
+    },
+    "value" : "2026-02-19 00:16:34",
+    "hash" : "608b032e1a19be78d0975ca0c2dd4885"
+  }, {
+    "id" : 944195,
+    "property" : {
+      "id" : 29,
+      "identifier" : "expor_para_api",
+      "description" : "Expor para API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.export.api"
+    },
+    "value" : "false",
+    "hash" : "68934a3e9455fa72420237eb05902327"
+  }, {
+    "id" : 944196,
+    "property" : {
+      "id" : 30,
+      "identifier" : "hint",
+      "description" : "Hint",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.hiny"
+    },
+    "value" : "Campo de texto formatado",
+    "hash" : "75bfdef3dfbf812a55eba2aba23cec3d"
+  }, {
+    "id" : 944197,
+    "property" : {
+      "id" : 31,
+      "identifier" : "descricao_api",
+      "description" : "Descrição API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.description.api"
+    },
+    "value" : "CAMPO_DE_TEXTO_FORMATADO",
+    "hash" : "aac480f6e64d2db8663d717ff8db13b6"
+  }, {
+    "id" : 944198,
+    "property" : {
+      "id" : 33,
+      "identifier" : "importado",
+      "description" : "Importado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.imported"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944201,
+    "property" : {
+      "id" : 34,
+      "identifier" : "migrado",
+      "description" : "Migrado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.migrated"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944200,
+    "property" : {
+      "id" : 36,
+      "identifier" : "requisicao_api",
+      "description" : "Requisição API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.api.request"
+    },
+    "value" : null,
+    "hash" : null
+  } ],
+  "fieldValues" : [ ]
+}

@@ -1,0 +1,302 @@
+{
+  "name" : "Campo combobox",
+  "identifier" : "CAMPO_COMBOBOX",
+  "type" : "CAM",
+  "code" : 119897,
+  "group" : {
+    "id" : 2342,
+    "name" : "Editor_3_campos",
+    "itemType" : {
+      "id" : 6,
+      "identifier" : "G_CAM",
+      "description" : "Grupo dos Campos",
+      "permissionModifyGroup" : true
+    },
+    "keyTranslate" : null,
+    "parentGroup" : {
+      "id" : 1,
+      "name" : "Repositório Local",
+      "itemType" : {
+        "id" : 3,
+        "identifier" : "R_REP_CAM",
+        "description" : "Raiz dos Repositórios dos Campos",
+        "permissionModifyGroup" : false
+      },
+      "keyTranslate" : null,
+      "parentGroup" : null,
+      "fieldsOnGroup" : null,
+      "editable" : false
+    },
+    "fieldsOnGroup" : 16,
+    "editable" : true
+  },
+  "active" : true,
+  "data" : {
+    "id" : 119897,
+    "name" : "Campo combobox",
+    "itemType" : {
+      "id" : 8,
+      "identifier" : "CAM",
+      "description" : "Campo",
+      "permissionModifyGroup" : true
+    },
+    "visualizationType" : {
+      "id" : 3,
+      "identifier" : "COMBOBOX",
+      "description" : "ComboBox"
+    },
+    "identifier" : "CAMPO_COMBOBOX",
+    "reprocessed" : false,
+    "active" : true,
+    "sourceCopyId" : null,
+    "defaultTexts" : [ ],
+    "hash" : "09632c179a78d623823a68962a907099",
+    "fieldParentIdentifier" : null,
+    "booleanType" : false,
+    "fieldParentId" : null,
+    "versionId" : null,
+    "tabIndex" : true,
+    "list" : true,
+    "groupId" : 2342
+  },
+  "visualizationType" : "COMBOBOX",
+  "fieldPropertyValues" : [ {
+    "id" : 944363,
+    "property" : {
+      "id" : 38,
+      "identifier" : "cascata_de_regra",
+      "description" : "Cascata de Regra",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rule.cascade"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944367,
+    "property" : {
+      "id" : 1,
+      "identifier" : "tamanho",
+      "description" : "Tamanho",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.size"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944371,
+    "property" : {
+      "id" : 2,
+      "identifier" : "lista_valores",
+      "description" : "Lista de Valores",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.list.values"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944366,
+    "property" : {
+      "id" : 4,
+      "identifier" : "acao",
+      "description" : "Ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.action"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944365,
+    "property" : {
+      "id" : 5,
+      "identifier" : "usado_em",
+      "description" : "Usado em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.used.in"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944369,
+    "property" : {
+      "id" : 7,
+      "identifier" : "editavel",
+      "description" : "Editável",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.editable"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944373,
+    "property" : {
+      "id" : 8,
+      "identifier" : "obrigatorio",
+      "description" : "Obrigatório",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.required"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944364,
+    "property" : {
+      "id" : 9,
+      "identifier" : "valor_inicial",
+      "description" : "Valor Inicial",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.initial.value"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944372,
+    "property" : {
+      "id" : 10,
+      "identifier" : "criado_por",
+      "description" : "Criado Por",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.by"
+    },
+    "value" : "SES50002",
+    "hash" : "50c9232a38b75f85272aa587047434be"
+  }, {
+    "id" : 944368,
+    "property" : {
+      "id" : 17,
+      "identifier" : "reprocessar",
+      "description" : "Reprocessar ação",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.reprocessed.action"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944370,
+    "property" : {
+      "id" : 22,
+      "identifier" : "regras_usadas",
+      "description" : "Regra(s)",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.rules"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944378,
+    "property" : {
+      "id" : 24,
+      "identifier" : "criado_em",
+      "description" : "Criado Em",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.created.in"
+    },
+    "value" : "2026-02-19 00:00:47",
+    "hash" : "3bc1cf4f3c57aba4197573987ff0ad9"
+  }, {
+    "id" : 944374,
+    "property" : {
+      "id" : 29,
+      "identifier" : "expor_para_api",
+      "description" : "Expor para API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.export.api"
+    },
+    "value" : "true",
+    "hash" : "b326b5062b2f0e69046810717534cb09"
+  }, {
+    "id" : 944375,
+    "property" : {
+      "id" : 30,
+      "identifier" : "hint",
+      "description" : "Hint",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.hiny"
+    },
+    "value" : "Campo combobox",
+    "hash" : "93e4e2f6a29726131640cc209159c7d4"
+  }, {
+    "id" : 944376,
+    "property" : {
+      "id" : 31,
+      "identifier" : "descricao_api",
+      "description" : "Descrição API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.description.api"
+    },
+    "value" : "CAMPO_COMBOBOX",
+    "hash" : "bd7b15b89349af43d37c196fcc384df5"
+  }, {
+    "id" : 944377,
+    "property" : {
+      "id" : 33,
+      "identifier" : "importado",
+      "description" : "Importado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.imported"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944380,
+    "property" : {
+      "id" : 34,
+      "identifier" : "migrado",
+      "description" : "Migrado",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.migrated"
+    },
+    "value" : null,
+    "hash" : null
+  }, {
+    "id" : 944379,
+    "property" : {
+      "id" : 36,
+      "identifier" : "requisicao_api",
+      "description" : "Requisição API",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.api.request"
+    },
+    "value" : null,
+    "hash" : null
+  } ],
+  "fieldValues" : [ {
+    "id" : 49548,
+    "value" : "1",
+    "identifier" : null,
+    "selected" : false,
+    "property" : {
+      "id" : 2,
+      "identifier" : "lista_valores",
+      "description" : "Lista de Valores",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.list.values"
+    },
+    "order" : 1
+  }, {
+    "id" : 49549,
+    "value" : "2",
+    "identifier" : null,
+    "selected" : false,
+    "property" : {
+      "id" : 2,
+      "identifier" : "lista_valores",
+      "description" : "Lista de Valores",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.list.values"
+    },
+    "order" : 2
+  }, {
+    "id" : 49550,
+    "value" : "4",
+    "identifier" : null,
+    "selected" : false,
+    "property" : {
+      "id" : 2,
+      "identifier" : "lista_valores",
+      "description" : "Lista de Valores",
+      "defaultValue" : null,
+      "keyTranslate" : "document.property.list.values"
+    },
+    "order" : 3
+  } ]
+}
