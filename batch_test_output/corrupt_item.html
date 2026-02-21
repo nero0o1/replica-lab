@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Form_corrupt_item.edt</title>
+
+    <style>
+        :root { --mv-primary: #2c3e50; --mv-danger: #e74c3c; --mv-warn: #f39c12; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; margin: 0; }
+        .mv-root-container { padding: 40px; }
+        .canvas { position: relative; background: white; border: 1px solid #dfe6e9; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); margin: 0 auto; }
+        .field { position: absolute; box-sizing: border-box; padding: 2px; }
+        .field label { display: block; font-size: 10px; font-weight: bold; color: var(--mv-primary); text-transform: uppercase; margin-bottom: 2px; }
+        .field input, .field select, .field textarea { width: 100%; height: calc(100% - 14px); border: 1px solid #ced4da; border-radius: 2px; padding: 4px; font-size: 12px; }
+        .field input:focus { border-color: var(--mv-primary); outline: none; }
+        
+        /* Quarantine styles */
+        [data-quarantined="true"] { border: 2px solid var(--mv-warn) !important; background: rgba(243, 156, 18, 0.05); }
+
+        .mv-print-view { display: none; }
+        @media print {
+            .mv-screen-view { display: none; }
+            .mv-print-view { display: block; }
+            .canvas-print { position: relative; width: 210mm; height: 297mm; }
+            .field-print { position: absolute; }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="mv-root-container">
+        <header><h1>Form_corrupt_item.edt</h1></header>
+        <main class="mv-screen-view">
+            <div class="canvas" style="width: 1024px; height: 768px;">
+                <div class="field" style="left: 10px; top: 10px; width: 200px; height: 30px; z-index: 0;" id="container_mv-field-FIELD_A">
+                    <label>Sample Name</label>
+                    <input type="text" id="mv-field-FIELD_A" name="FIELD_A">
+                </div>
+            </div>
+        </main>
+        <div class="mv-print-view">
+            <div class="canvas-print">
+                <div class="field-print" style="left: 2.65mm; top: 2.65mm; width: 52.92mm; height: 7.94mm; z-index: 0;">Sample Name: [__________]</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class StateOrchestrator {
+            constructor(registry) {
+                this.registry = registry || {};
+                this.activeNodes = new Set();
+                this.init();
+            }
+
+            init() {
+                Object.keys(this.registry).forEach(fieldId => {
+                    const el = document.getElementById('mv-field-' + fieldId);
+                    if (el) {
+                        el.addEventListener('change', () => this.update(fieldId));
+                        if (el.type === 'checkbox' || el.type === 'radio') {
+                            el.addEventListener('click', () => this.update(fieldId));
+                        }
+                    }
+                });
+            }
+
+            update(triggerId) {
+                if (this.activeNodes.has(triggerId)) return; // Prevents cycle
+                this.activeNodes.add(triggerId);
+                
+                try {
+                    const affectedTargets = new Set();
+                    // 1. Identify all targets possibly affected by this trigger
+                    this.registry[triggerId].forEach(rule => {
+                        rule.targets.forEach(t => affectedTargets.add(t));
+                    });
+
+                    // 2. Deterministic Recalculation (Union Logic)
+                    affectedTargets.forEach(targetId => this.evaluateFieldState(targetId));
+                } finally {
+                    this.activeNodes.delete(triggerId);
+                }
+            }
+
+            evaluateFieldState(targetId) {
+                // Find all rules across the entire registry that point to this target
+                let shouldDisable = false;
+                Object.values(this.registry).forEach(rules => {
+                    rules.forEach(rule => {
+                        if (rule.targets.includes(targetId)) {
+                            if (rule.intent === 'DISABLE' && this.checkCondition(rule.condition)) {
+                                shouldDisable = true;
+                            }
+                            if (rule.intent === 'ENABLE' && this.checkCondition(rule.condition)) {
+                                // In MV, ENABLE rules typically override or compete. 
+                                // Here we implement intersection: if any DISABLE rule is met, it stays disabled.
+                            }
+                        }
+                    });
+                });
+
+                const targetEl = document.getElementById('mv-field-' + targetId);
+                if (targetEl) {
+                    targetEl.disabled = shouldDisable;
+                }
+            }
+
+            checkCondition(cond) {
+                if (!cond) return true;
+                if (cond.type === 'leaf') {
+                    const el = document.getElementById('mv-field-' + cond.subject);
+                    if (!el) return false;
+                    const val = el.type === 'checkbox' ? (el.checked ? 'true' : 'false') : el.value;
+                    
+                    switch(cond.op) {
+                        case '==': return val === cond.val;
+                        case '!=': return val !== cond.val;
+                        case '>': return parseFloat(val) > parseFloat(cond.val);
+                        case '<': return parseFloat(val) < parseFloat(cond.val);
+                        default: return false;
+                    }
+                } else if (cond.type === 'group') {
+                    if (cond.op === 'AND') {
+                        return cond.children.every(c => this.checkCondition(c));
+                    } else {
+                        return cond.children.some(c => this.checkCondition(c));
+                    }
+                }
+                return true;
+            }
+        }
+
+        const orchestrator = new StateOrchestrator({});
+    </script>
+
+</body></html>

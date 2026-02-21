@@ -1,0 +1,49 @@
+{
+    "session_id": "CRUCIBLE_1771704942",
+    "start_time": "2026-02-21T20:15:42Z",
+    "stats": {
+        "total": 5,
+        "success": 5,
+        "integrity_failed": 0,
+        "parsing_failed": 0,
+        "collisions": 1
+    },
+    "artifacts": [
+        {
+            "input": "corrupt_item.edt",
+            "output": "corrupt_item.html",
+            "status": "SUCCESS",
+            "integrity_gate": "PASSED",
+            "layout_collision": false
+        },
+        {
+            "input": "form1.edt",
+            "output": "form1.html",
+            "status": "SUCCESS",
+            "integrity_gate": "PASSED",
+            "layout_collision": false
+        },
+        {
+            "input": "form_collision.edt",
+            "output": "form_collision.html",
+            "status": "SUCCESS",
+            "integrity_gate": "PASSED",
+            "layout_collision": true
+        },
+        {
+            "input": "valid1.edt",
+            "output": "valid1.html",
+            "status": "SUCCESS",
+            "integrity_gate": "PASSED",
+            "layout_collision": false
+        },
+        {
+            "input": "valid2.edt",
+            "output": "valid2.html",
+            "status": "SUCCESS",
+            "integrity_gate": "PASSED",
+            "layout_collision": false
+        }
+    ],
+    "end_time": "2026-02-21T20:15:42Z"
+}

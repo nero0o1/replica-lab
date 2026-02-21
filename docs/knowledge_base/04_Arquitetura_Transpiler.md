@@ -55,5 +55,13 @@ Para o NotebookLM, o fluxo lógico pode ser resumido nos parágrafos abaixo:
 
 O processo começa com o **Ingestion Layer** (Camada de Ingestão), onde parsers leem a fonte (XML ou JSON) e transformam tudo em objetos genéricos de "Propriedade". Em seguida, o **Semantic Processor** aplica o dicionário de dados (Documento 02) para dar significado àqueles números. Uma vez que temos uma AST válida, o sistema pode realizar o **Logical Refinement** (Refinamento Lógico), validando os hashes (Documento 01) e o grafo de dependências das regras (Documento 03). Por fim, o **Emission Layer** gera o arquivo final desejado, garatindo a reinjeção dos binários do Jasper via Vault.
 
+## 6. Motor de Ejeção Web: StateOrchestrator e Reatividade
+
+Para garantir que o comportamento clinical permaneça íntegro no navegador, o emissor web não gera scripts `if/else` simples. Ele injeta o **StateOrchestrator (ES6)**:
+
+- **Unified State**: As regras não são gatilhos isolados, mas parte de uma matriz de dependências. O estado de um campo é a união calculada de todas as regras que o afetam.
+- **Cycle Prevention**: Utiliza o protocolo `activeNodes` (Set) para permitir reentrância sem causar estouro de pilha (Stack Overflow).
+- **Inert Quarantine**: Scripts PL/SQL opacos são mantidos em Base64 dentro de tags inertes, protegendo a execução do front-end.
+
 > [!NOTE]
 > Este documento é o mapa de engenharia do projeto. Utilize-o para entender o roteamento de dados entre os diferentes módulos de código na pasta `src/`.

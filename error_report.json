@@ -1,0 +1,7 @@
+[
+    {
+        "file": "corrupt_item.edt",
+        "error": "Corrupted file structure detected (Mock Validation Failure).",
+        "traceback": "Traceback (most recent call last):\n  File \"j:\\replica_lab\\cli_mass_converter.py\", line 46, in run\n    doc = self._mock_import(filename)\n  File \"j:\\replica_lab\\cli_mass_converter.py\", line 73, in _mock_import\n    raise ValueError(\"Corrupted file structure detected (Mock Validation Failure).\")\nValueError: Corrupted file structure detected (Mock Validation Failure).\n"
+    }
+]

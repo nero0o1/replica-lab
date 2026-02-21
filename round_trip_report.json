@@ -1,0 +1,6 @@
+{
+  "input": "batch_test_input/valid1.edt",
+  "divergences": [],
+  "parity_score": 100,
+  "vt3_status": "PASS"
+}

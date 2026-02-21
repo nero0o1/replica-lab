@@ -51,3 +51,12 @@ Muitas vezes, ao copiar e colar scripts SQL entre diferentes editores, caractere
 | **Booleano** | Usar `"true"` ou `"false"` | O hash é calculado sobre o tipo JSON, não sobre o valor SQL. |
 | **ID do Campo** | Deve ser o ID real do banco | Integração direta com a tabela `CD_CAMPO`. |
 | **Sanitização** | Remover `\r` e espaços | Pequenas divergências visíveis são falhas invisíveis de integridade. |
+
+## 5. Operação "Forensic Registry": O Portão Duplo de Validação
+
+Para garantir que a transposição não apenas carregou os dados corretamente, mas os ejetou com fidelidade, implementamos o **Double Hash-Gatting**:
+
+1.  **Ingestion Gate**: Verifica se a AST corresponde bit-a-bit ao arquivo `.edt` original.
+2.  **Emission Gate (Identity Audit)**: Realiza uma varredura no `output.html` gerado para garantir que todos os identificadores presentes na AST foram materializados no DOM com o prefixo `mv-field-`. 
+
+Se qualquer um desses portões falhar, o sistema bloqueia a escrita no disco (`Abort Write`), prevenindo a proliferação de artefatos clínicos corrompidos.
