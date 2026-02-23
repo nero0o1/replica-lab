@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 from typing import List, Optional
 from core.ast_nodes import MvDocument, MvLayout, MvField, MvProperty, MvBehavioralRule, MvLegacyPayload
+from core.etiquetas_semanticas import obter_etiqueta
 
 class MvXmlParser:
     """
@@ -73,10 +74,11 @@ class MvXmlParser:
 
     def _parse_property(self, node: ET.Element) -> MvProperty:
         p_id = int(node.findtext("CD_PROPRIEDADE", "0"))
+        p_identifier = obter_etiqueta(p_id)
         val = node.findtext("VL_PROPRIEDADE")
         
         # S/N to Boolean
         if val == "S": val = True
         elif val == "N": val = False
         
-        return MvProperty(p_id, "", val)
+        return MvProperty(p_id, p_identifier, val)

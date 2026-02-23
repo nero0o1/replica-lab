@@ -29,12 +29,14 @@ class MvDocument {
     }
 
     static [string] SanitizeIdentifier([string]$id) {
-        if ([string]::IsNullOrWhiteSpace($id)) { return "UNNAMED_OBJ" }
-        # Rule: UPPER_SNAKE_CASE
+        if ([string]::IsNullOrWhiteSpace($id)) { return "UNNAMED_ID" }
+        # Regra do Crachá: UPPER_SNAKE_CASE
         $sanitized = $id.ToUpper().Trim()
+        # Substituir qualquer caractere não alfanumérico por sublinhado
         $sanitized = $sanitized -replace '[^A-Z0-9_]', '_'
-        $sanitized = $sanitized -replace '_+', '_'
-        return $sanitized.Trim('_')
+        # Colapsar sublinhados duplicados e limpar extremidades
+        $sanitized = ($sanitized -replace '_+', '_').Trim('_')
+        return $sanitized
     }
 
     [void] AddField([MvField]$field) {
@@ -97,6 +99,38 @@ class MvField {
             return $this.Properties[$key]
         }
         return $null
+    }
+}
+
+# Class: MvFoundation
+# Represents the strict 'Wave 1' foundation structure in PowerShell.
+class MvFoundation {
+    [string] $Nome
+    [string] $Identificador
+    [string] $Tipo
+    [string] $Grupo
+    [hashtable] $Dados = @{}
+    [string] $Versao = "1.0.0"
+    [hashtable] $Layout = @{}
+
+    MvFoundation([string]$nome, [string]$identificador, [string]$tipo, [string]$grupo) {
+        $this.Nome = $nome
+        $this.Identificador = $identificador
+        $this.Tipo = $tipo
+        $this.Grupo = $grupo
+    }
+
+    [PSCustomObject] ToOrderedObject() {
+        $obj = [ordered]@{
+            Nome          = $this.Nome
+            Identificador = $this.Identificador
+            Tipo          = $this.Tipo
+            Grupo         = $this.Grupo
+            Dados         = $this.Dados
+            "Versão"      = $this.Versao
+            Layout        = $this.Layout
+        }
+        return [PSCustomObject]$obj
     }
 }
 

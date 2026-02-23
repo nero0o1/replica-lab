@@ -303,7 +303,7 @@ function Normalize-Identifier([string]$s) {
 
   $t2 = $t2.ToUpperInvariant()
   $t2 = [Regex]::Replace($t2, '[^A-Z0-9]+', '_')
-  $t2 = [Regex]::Replace($t2, '_{2,}', '_')
+  $t2 = [Regex]::Replace($t2, '_{2}', '_')
   $t2 = $t2.Trim('_')
   return $t2
 }

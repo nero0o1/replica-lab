@@ -1,6 +1,7 @@
 import json
 from typing import Dict, Any
 from core.ast_nodes import MvDocument, MvLayout, MvField, MvProperty
+from core.etiquetas_semanticas import obter_etiqueta, obter_id
 
 class MvJsonParser:
     """
@@ -16,8 +17,16 @@ class MvJsonParser:
         doc.identifier = data.get("identifier")
         
         doc_props = data.get("document_properties", {})
-        for p_id, p_val in doc_props.items():
-            doc.property_document_values.append(MvProperty(int(p_id), "", p_val))
+        for p_key, p_val in doc_props.items():
+            # Support both numeric keys (legacy) and semantic labels (modern)
+            if isinstance(p_key, int) or p_key.isdigit():
+                p_id = int(p_key)
+                p_ident = obter_etiqueta(p_id)
+            else:
+                p_ident = p_key
+                resolved_id = obter_id(p_key)
+                p_id = resolved_id if resolved_id is not None else 0
+            doc.property_document_values.append(MvProperty(p_id, p_ident, p_val))
 
         for l_data in data.get("layouts", []):
             doc.layouts.append(self._parse_layout(l_data))
@@ -47,8 +56,16 @@ class MvJsonParser:
         field.height = data.get("height")
         
         props = data.get("properties", {})
-        for p_id, p_val in props.items():
-            field.properties.append(MvProperty(int(p_id), "", p_val))
+        for p_key, p_val in props.items():
+            # Support both numeric keys (legacy) and semantic labels (modern)
+            if isinstance(p_key, int) or (isinstance(p_key, str) and p_key.isdigit()):
+                p_id = int(p_key)
+                p_ident = obter_etiqueta(p_id)
+            else:
+                p_ident = p_key
+                resolved_id = obter_id(p_key)
+                p_id = resolved_id if resolved_id is not None else 0
+            field.properties.append(MvProperty(p_id, p_ident, p_val))
             
         for r_data in data.get("rules", []):
             field.rules.append(self._parse_rule(r_data))

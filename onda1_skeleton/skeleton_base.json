@@ -1,0 +1,15 @@
+{
+    "Nome": "Esqueleto Base da Máquina",
+    "Identificador": "CORE_SKELETON_001",
+    "Tipo": "ESTRUTURA_BASE",
+    "Grupo": "ONDA1",
+    "Dados": {
+        "Descricao": "Fundação estrutural para interoperabilidade de sistemas legados e modernos.",
+        "Status": "OPERACIONAL"
+    },
+    "Versão": "1.0.0",
+    "Layout": {
+        "Tipo": "GRID",
+        "Resolucao": "96DPI"
+    }
+}

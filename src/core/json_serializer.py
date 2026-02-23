@@ -1,6 +1,7 @@
 import json
 from typing import Dict, Any
-from core.ast_nodes import MvDocument, MvLayout, MvField, MvProperty, MvBehavioralRule
+from core.ast_nodes import MvDocument, MvLayout, MvField, MvProperty, MvBehavioralRule, Onda1Foundation
+from core.etiquetas_semanticas import obter_etiqueta, PropId
 
 class MvJsonSerializer:
     """
@@ -9,6 +10,10 @@ class MvJsonSerializer:
     - Uses Rosetta Stone mapping for properties.
     """
 
+    def serialize_wave1(self, foundation: Onda1Foundation) -> str:
+        """Serializes the Onda 1 foundation to JSON with strict key ordering."""
+        return json.dumps(foundation.to_dict(), indent=2, ensure_ascii=False)
+
     def serialize(self, doc: MvDocument) -> str:
         data = {
             "id": doc.id,
@@ -16,7 +21,7 @@ class MvJsonSerializer:
             "version": "3.0",
             "data": {
                 "identifier": doc.identifier,
-                "document_properties": {p.id: p.value for p in doc.property_document_values if p.id},
+                "document_properties": {obter_etiqueta(p.id): p.value for p in doc.property_document_values if p.id},
                 "layouts": [self._serialize_layout(l) for l in doc.layouts]
             }
         }
@@ -40,7 +45,7 @@ class MvJsonSerializer:
             "y": field.y,
             "width": field.width,
             "height": field.height,
-            "properties": {p.id: p.value for p in field.properties if p.id},
+            "properties": {obter_etiqueta(p.id): p.value for p in field.properties if p.id},
             "rules": [self._serialize_rule(r) for r in field.rules],
             "children": [self._serialize_field(c) for c in field.children]
         }

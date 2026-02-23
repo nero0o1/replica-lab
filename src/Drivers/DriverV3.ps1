@@ -33,7 +33,7 @@ class DriverV3 {
         
         # Pretty Print for final file + SQL No-Escape Policy
         $finalJson = ConvertTo-Json $v3Doc -Depth 10
-        # Post-Processing: Unescape & < > for SQL fields (IDs 4, 21)
+        # Post-Processing: Unescape & < > for SQL fields (acao=4, acaoSql=21)
         $finalJson = $finalJson -replace '\\u0026', '&' -replace '\\u003c', '<' -replace '\\u003e', '>'
         
         [System.IO.File]::WriteAllText($this.OutputPath, $finalJson, [System.Text.Encoding]::UTF8)

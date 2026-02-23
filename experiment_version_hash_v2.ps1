@@ -56,7 +56,7 @@ function Get-CandidateD([string]$Content) {
     # Heuristic: Replace `"hash"\s*:\s*"[a-f0-9]{32}"` with `"hash":null` or remove it?
     # Let's try REMOVING it.
     $mod = $Content -replace '"hash"\s*:\s*"[a-fA-F0-9]{32}"\s*,?', '' 
-    # Clean up potentially trailing commas: `, }` -> `}` is hard to regex globally safely.
+    # Clean up potentially trailing commas: `}` -> `}` is hard to regex globally safely.
     # This candidate is weak if we don't have a parser.
     return Get-Md5Hex $Utf8NoBom.GetBytes($mod)
 }

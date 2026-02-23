@@ -1,4 +1,5 @@
 from typing import List, Optional, Dict, Any
+from core.etiquetas_semanticas import PropId
 
 class MvLegacyPayload:
     """Vault for binary data that must be preserved but not parsed (e.g. Jasper blobs)."""
@@ -42,7 +43,7 @@ class MvBehavioralRule:
         self.intent = intent       # Ex: "ENABLE", "DISABLE", "VALIDATE", "OPAQUE_SCRIPT"
         self.targets: List[str] = []
         self.condition_root: Optional[MvRuleCondition] = None
-        self.terminal: bool = True # Based on cascata_de_regra (ID 38)
+        self.terminal: bool = True # Based on cascata_de_regra (PropId.CASCATA_DE_REGRA = 38)
         self.raw_source: Optional[str] = None
 
 class MvField:
@@ -71,6 +72,18 @@ class MvLayout:
         self.fields: List[MvField] = []
 
 class MvDocument:
+    @staticmethod
+    def sanitize_identifier(identifier: str) -> str:
+        """Regra do Crachá: Força padronização UPPER_SNAKE_CASE para IDs técnicos."""
+        if not identifier: return "UNNAMED_ID"
+        # 1. Transformar em maiúsculas
+        clean = identifier.upper().strip()
+        # 2. Substituir espaços e hifens por sublinhados
+        clean = re.sub(r'[^A-Z0-9_]', '_', clean)
+        # 3. Remover sublinhados duplicados e nas extremidades
+        clean = re.sub(r'_+', '_', clean).strip('_')
+        return clean
+
     def __init__(self, name: str):
         self.id: Optional[int] = None
         self.name: str = name
@@ -133,3 +146,27 @@ class MvDocument:
             flat.append(f)
             flat.extend(self.flatten_fields(f.children))
         return flat
+
+class Onda1Foundation:
+    """Class representing the strict 'Wave 1' foundation structure."""
+    def __init__(self, nome: str, identificador: str, tipo: str, grupo: str):
+        self.Nome = nome
+        self.Identificador = identificador
+        self.Tipo = tipo
+        self.Grupo = grupo
+        self.Dados: Dict[str, Any] = {}
+        self.Versão: str = "1.0.0"
+        self.Layout: Dict[str, Any] = {}
+
+    def to_dict(self) -> Dict[str, Any]:
+        """Returns the foundation as a dictionary maintaining strict key order."""
+        from collections import OrderedDict
+        d = OrderedDict()
+        d["Nome"] = self.Nome
+        d["Identificador"] = self.Identificador
+        d["Tipo"] = self.Tipo
+        d["Grupo"] = self.Grupo
+        d["Dados"] = self.Dados
+        d["Versão"] = self.Versão
+        d["Layout"] = self.Layout
+        return d

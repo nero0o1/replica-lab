@@ -47,7 +47,11 @@ A estrutura abaixo foi desenhada para separar rigorosamente a lógica pura (conh
 │   │   ├── 11_developer_intent_dictionary.md  # [FORENSIC] Dicionário de IDs e Intenções.
 │   │   ├── 12_Seguranca_e_Autorizacao.md      # [DOC] Controle de Acesso e Permissões.
 │   │   ├── 13_Conversao_Documentos.md         # [DOC] Controle de Acesso e Permissões.
-│   │   └── 14_Auditoria_VT3_Soberania.md      # [DOC] Controle de Acesso e Permissões.
+│   │   ├── 14_Auditoria_VT3_Soberania.md      # [DOC] Controle de Acesso e Permissões.
+│   │   ├── 15_Dicionario_Etiquetas_Semanticas.md # [DOC] Mapeamento de Magic Numbers.
+│   │   └── 16_Motor_de_Blindagem_Interface.md  # [DOC] Resiliência e Serialização.
+├── onda1_skeleton/             # Fundação Estrutural (Onda 1)
+│   └── skeleton_base.json      # O esqueleto da máquina.
 ├── src/                        # O Motor de Código
 │   ├── core/                   # Lógica Pura (AST, Hash Engine).
 │   ├── importers/              # Conversores de Entrada.
@@ -102,9 +106,13 @@ Para investigar o ciclo de vida de componentes, gatilhos de eventos ou funções
 Para questões relacionadas a múltiplos idiomas, formatação regional ou adaptação cultural:
 - **Dossiê 08: Internacionalização.**
 
-### 3.9 Segurança e Autorização
-Para entender os mecanismos de controle de acesso, permissões de usuário ou segurança de dados:
-- **Dossiê 12: Segurança e Autorização.**
+### 3.10 Refatoração e Manutenibilidade (Etiquetas)
+Para tarefas de substituição de IDs numéricos ou manutenção do dicionário de propriedades:
+- **Dossiê 15: Dicionário de Etiquetas Semânticas.**
+
+### 3.11 Resiliência de Interface e Parsing
+Sempre que lidar com erros de parsing de strings complexas, aspas ou quebras de linha:
+- **Dossiê 16: Motor de Blindagem de Interface.**
 
 ---
 
@@ -136,6 +144,14 @@ Esta seção rastreia as descobertas de "Matéria Escura" — comportamentos imp
     - **Descoberta**: Scripts legados injetados via `LO_REL_COMPILADO` podem conter lógica de negócios crítica, mas são opacos.
     - **Solução**: O Emitter Web isola esses scripts em um ambiente de quarentena (`iframe` com `sandbox`) para execução segura e monitorada.
     - **Dossiê Relacionado**: **Dossiê 04: Arquitetura do Transpiler** e **Dossiê 12: Segurança e Autorização**.
+7.  **Wave 1: Strict JSON Ordering**:
+    - **Descoberta**: O parser de destino (Editor 3) é sensível à ordem das chaves em certas versões.
+    - **Regra**: O Nome deve vir em primeiro, seguido pelo Identificador. A conformidade é garantida pela classe `Onda1Foundation`.
+    - **Dossiê Relacionado**: **Dossiê 16: Motor de Blindagem**.
+8.  **The Parsing Fragility Peak**:
+    - **Descoberta**: Aspas e quebras de linha em campos de texto corrompem a integridade do transporte de metadados.
+    - **Solução**: Blindagem atômica via Base64 para garantir que a UI seja transportada como uma "caixa preta" indestrutível.
+    - **Dossiê Relacionado**: **Dossiê 16: Motor de Blindagem**.
 
 ### 4.1 Homologação: Operação Forensic Infusion
 O motor de ejeção web foi atualizado com as leis de física de layout (Pixels -> Millimeters) e o sistema de quarentena para OPAQUE_SCRIPT. A prova técnica de paridade e segurança reside em:
@@ -176,6 +192,11 @@ Esta seção detalha as principais operações de engenharia e as descobertas t�
 - **Descrição**: Implementação de medidas de segurança para proteger dados sensíveis e garantir a integridade do sistema durante a transição.
 - **Destaque Técnico**: Validação de hashes criptográficos, controle de acesso baseado em funções e quarentena de código externo para prevenir vulnerabilidades.
 - **Dossiês Envolvidos**: **Dossiê 01: Criptografia e Integridade**, **Dossiê 12: Segurança e Autorização**.
+
+### 5.7 Operação "Wave 1: Structural Skeleton"
+- **Descrição**: Criação da fundação estrutural com ordem de chaves obrigatória e tradução de magic numbers para etiquetas semânticas.
+- **Destaque Técnico**: Implementação do módulo `etiquetas_semanticas.py` e do motor `ShieldingEngine` para garantir resiliência total no transporte de componentes.
+- **Dossiês Envolvidos**: **Dossiê 15: Dicionário de Etiquetas**, **Dossiê 16: Motor de Blindagem**.
 
 ---
 
