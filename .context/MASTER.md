@@ -52,6 +52,20 @@ A estrutura abaixo foi desenhada para separar rigorosamente a lógica pura (conh
 │   │   └── 16_Motor_de_Blindagem_Interface.md  # [DOC] Resiliência e Serialização.
 ├── onda1_skeleton/             # Fundação Estrutural (Onda 1)
 │   └── skeleton_base.json      # O esqueleto da máquina.
+├── notebooklm_reports
+│   ├── 01_Arquitetura_Visao_Geral.md
+│   ├── 02_Fluxo_de_Dados_e_Logica.md
+│   ├── 03_Dependencias_e_Seguranca.md
+│   ├── 04_Guia_de_Reconstrucao.md
+│   ├── 05_A_Auditoria_Estrutural_e_Containers.md
+│   ├── 05_C_Identidade_e_Diferencas_Campos.md
+│   ├── 05_D_Matriz_Funcional_Campos.md
+│   ├── 05_E_Anatomia_Detalhada_e_Layouts.md
+│   ├── 05_F_Anatomia_Comparada_Integral.md
+│   ├── DEVELOPER_HANDOVER_GUIDE.md
+│   ├── INDEX.txt
+│   ├── MASTER_KNOWLEDGE_BASE.md
+│   └── walkthrough.md
 ├── src/                        # O Motor de Código
 │   ├── core/                   # Lógica Pura (AST, Hash Engine).
 │   ├── importers/              # Conversores de Entrada.
@@ -152,6 +166,18 @@ Esta seção rastreia as descobertas de "Matéria Escura" — comportamentos imp
     - **Descoberta**: Aspas e quebras de linha em campos de texto corrompem a integridade do transporte de metadados.
     - **Solução**: Blindagem atômica via Base64 para garantir que a UI seja transportada como uma "caixa preta" indestrutível.
     - **Dossiê Relacionado**: **Dossiê 16: Motor de Blindagem**.
+9.  **Hash Integrity Lock (Anti-Fraud Guard)**:
+    - **Descoberta**: Propriedades clínicas no Editor 3 exigem um lacre MD5 para validação de integridade antifraude.
+    - **Solução**: Implementação de uma **Look-up Table** estática (`tabela_hashes.py`) que associa valores a lacres homologados, encapsulando-os no formato `{"value": X, "hash": "Y"}`.
+    - **Dossiê Relacionado**: **Dossiê 01: Criptografia e Integridade**.
+10. **Geometric Memory Crash Protection (Onda 4)**:
+    - **Descoberta**: Objetos JSON de layout abertos causam crash de memória no interpretador hospitalar.
+    - **Solução**: Técnica de **Dupla Serialização** com Minificação Extrema. O layout é selado como uma string única na chave `content`, utilizando `separators=(',',':')`.
+    - **Dossiê Relacionado**: **Dossiê 16: Motor de Blindagem**.
+11. **Lexical Shielding (O Inspetor Rigoroso)**:
+    - **Descoberta**: Identificadores fora do padrão (acentos, espaços) abortam silenciosamente o carregamento no MV Soul.
+    - **Solução**: Barreira de Regex `^(TXT|RDB|CHK|CBB|DAT)_[A-Z0-9_]+$` com política **Fail-Fast** via Exceção Fatal.
+    - **Dossiê Relacionado**: **Dossiê 16: Motor de Blindagem**.
 
 ### 4.1 Homologação: Operação Forensic Infusion
 O motor de ejeção web foi atualizado com as leis de física de layout (Pixels -> Millimeters) e o sistema de quarentena para OPAQUE_SCRIPT. A prova técnica de paridade e segurança reside em:
@@ -197,6 +223,21 @@ Esta seção detalha as principais operações de engenharia e as descobertas t�
 - **Descrição**: Criação da fundação estrutural com ordem de chaves obrigatória e tradução de magic numbers para etiquetas semânticas.
 - **Destaque Técnico**: Implementação do módulo `etiquetas_semanticas.py` e do motor `ShieldingEngine` para garantir resiliência total no transporte de componentes.
 - **Dossiês Envolvidos**: **Dossiê 15: Dicionário de Etiquetas**, **Dossiê 16: Motor de Blindagem**.
+
+### 5.8 Operação "Onda 3: O Cadeado de Segurança"
+- **Descrição**: Implementação de governança antifraude via hashes MD5 estáticos para integridade de prontuários.
+- **Destaque Técnico**: Introdução da `tabela_hashes.py` e refatoração do `TradutorRoseta` para encapsulamento atômico de valores com seus respectivos lacres.
+- **Dossiês Envolvidos**: **Dossiê 01: Criptografia e Integridade**, **Dossiê 02: Mapeamento de Dados**.
+
+### 5.9 Operação "Onda 4: A Caixa Preta Visual"
+- **Descrição**: Implementação de Dupla Serialização minificada para proteção de memória e integridade geométrica de layouts.
+- **Destaque Técnico**: Módulo `empacotador_layout.py` garante a redução de ruído (espaços/quebras) no transporte de metadados visuais.
+- **Dossiês Envolvidos**: **Dossiê 16: Motor de Blindagem**.
+
+### 5.10 Operação "Onda 5: O Inspetor Rigoroso"
+- **Descrição**: Implementação de barreira de validação léxica intransponível para crachás técnicos.
+- **Destaque Técnico**: Introdução do `inspetor_regras.py` com Regex estrito e mecanismo de interrupção por exceção fatal (Fail-Fast).
+- **Dossiês Envolvidos**: **Dossiê 16: Motor de Blindagem**.
 
 ---
 

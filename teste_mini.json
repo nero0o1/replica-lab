@@ -1,0 +1,32 @@
+{
+    "obrigatorio": {
+        "value": true,
+        "hash": "b326b5062b2f0e69046810717534cb09"
+    },
+    "tamanho": {
+        "value": 255,
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "reprocessar": {
+        "value": false,
+        "hash": "68934a3e9455fa72420237eb05902327"
+    },
+    "acaoSql": {
+        "value": "SELECT *",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "listaValores": {
+        "value": [
+            {
+                "value": "A"
+            },
+            {
+                "value": "B"
+            },
+            {
+                "value": "C"
+            }
+        ],
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+}
