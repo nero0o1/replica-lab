@@ -1,0 +1,89 @@
+{
+    "name":  "COMBO_TESTE0",
+    "identifier":  "COMBO_TESTE0",
+    "type":  "DOC",
+    "group":  {
+                  "name":  "RepositÃ³rio Local",
+                  "id":  1,
+                  "identifier":  "R_REP_CAM"
+              },
+    "data":  {
+                 "active":  null,
+                 "id":  null
+             },
+    "version":  {
+                    "hash":  "5db9e4ee11e018dccb9c4208fda5d577",
+                    "id":  1
+                },
+    "pages":  [
+                  {
+                      "id":  1,
+                      "identifier":  "PAGE_1",
+                      "name":  "PÃ¡gina 1",
+                      "description":  "PÃ¡gina 1",
+                      "width": 800.0,
+                      "height": 1100.0,
+                      "versionId":  null
+                  }
+              ],
+    "fields":  [
+                   {
+                       "id":  3253,
+                       "identifier":  "COMBOBOX",
+                       "name":  "COMBOBOX",
+                       "visualizationType":  {
+                                                 "id":  3,
+                                                 "identifier":  "combobox"
+                                             },
+                       "fieldPropertyValues":  [
+                                                   {
+                                                       "property":  {
+                                                                        "identifier":  "lista_valores"
+                                                                    },
+                                                       "fieldValues":  [
+                                                                           "OpÃ§Ã£o 1",
+                                                                           "OpÃ§Ã£o 2"
+                                                                       ],
+                                                       "hash":  null
+                                                   },
+                                                   {
+                                                       "property":  {
+                                                                        "identifier":  "editavel"
+                                                                    },
+                                                       "value":  "true",
+                                                       "hash":  "b326b5062b2f0e69046810717534cb09"
+                                                   }
+                                               ],
+                       "group":  {
+                                     "name":  "Campos",
+                                     "id":  6,
+                                     "identifier":  "G_CAM"
+                                 },
+                       "groupId":  6,
+                       "fieldParentId":  6,
+                       "fieldParentIdentifier":  "G_CAM",
+                       "active":  true
+                   }
+               ],
+    "groups":  [
+                   {
+                       "id":  1,
+                       "identifier":  "R_REP_CAM",
+                       "name":  "RepositÃ³rio Local",
+                       "itemType":  "R_REP_CAM"
+                   },
+                   {
+                       "id":  6,
+                       "identifier":  "G_CAM",
+                       "name":  "Campos",
+                       "itemType":  "G_CAM",
+                       "parentGroupIdentifier":  "R_REP_CAM"
+                   }
+               ],
+    "layouts":  [
+                    {
+                        "name":  "Design PadrÃ£o",
+                        "content":  "{\"pageBody\":{\"children\":{\"COMBOBOX\":{\"metadado\":3253,\"identifier\":\"COMBOBOX\",\"visualization\":\"ComboBox\",\"type\":\"combobox\",\"visualizationType\":\"combobox\",\"style\":{\"fontFamily\":\"Arial\",\"fontSize\":\"12px\",\"color\":\"#000\",\"lineHeight\":1,\"zIndex\":1,\"x\":647.0,\"y\":334.0,\"width\":80.0,\"height\":28.0},\"id\":\"COMBOBOX\"}}}}"
+                    }
+                ]
+}

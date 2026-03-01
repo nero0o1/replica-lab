@@ -1,0 +1,7 @@
+{
+  "status": "BAD_REQUEST",
+  "uuid": null,
+  "code": "400",
+  "message": "Documento de código 305 não encontrado.",
+  "errors": []
+}

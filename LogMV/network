@@ -1,0 +1,179 @@
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/import/uploadFiles/53",
+{
+    "headers": {
+        "accept": "*/*",
+        "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cache-control": "max-age=0",
+        "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryzPzOocHYeAxPSdub",
+        "priority": "u=1, i",
+        "route": "/documents/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+    "body": "------WebKitFormBoundaryzPzOocHYeAxPSdub\r\nContent-Disposition: form-data; name=\"files\"; filename=\"ficha_ambulatorial_1_REV_2026.zip\"\r\nContent-Type: application/x-zip-compressed\r\n\r\n\r\n------WebKitFormBoundaryzPzOocHYeAxPSdub--\r\n",
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/groups/52/children",
+{
+    "headers": {
+        "accept": "*/*",
+        "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "application/json",
+        "pragma": "no-cache",
+        "priority": "u=1, i",
+        "route": "/documents/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+    "body": null,
+    "method": "GET",
+    "mode": "cors",
+    "credentials": "include"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/documents?groupId=53",
+{
+    "headers": {
+        "accept": "*/*",
+        "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "application/json",
+        "pragma": "no-cache",
+        "priority": "u=1, i",
+        "route": "/documents/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+    "body": null,
+    "method": "GET",
+    "mode": "cors",
+    "credentials": "include"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/documents/paginated?pageNumber=1&pageSize=10&sortBy=id&groupId=53&type=DOC",
+{
+    "headers": {
+        "accept": "*/*",
+        "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "application/json",
+        "pragma": "no-cache",
+        "priority": "u=1, i",
+        "route": "/documents/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin"
+    },
+    "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+    "body": null,
+    "method": "GET",
+    "mode": "cors",
+    "credentials": "include"
+});
+
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/import/uploadFiles/53",
+{
+    "headers": {
+        "accept": "*/*",
+        "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cache-control": "max-age=0",
+        "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryzPzOocHYeAxPSdub",
+        "priority": "u=1, i",
+        "route": "/documents/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "cookie": "language=pt_BR; JSESSIONID=94644E7E84BDE7E46C429F8F58BFD37D; logged-user-id=SES50002; company-id=17",
+        "Referer": "https://mvtst1.saude.go.gov.br/editor/index.html"
+    },
+    "body": "------WebKitFormBoundaryzPzOocHYeAxPSdub\r\nContent-Disposition: form-data; name=\"files\"; filename=\"ficha_ambulatorial_1_REV_2026.zip\"\r\nContent-Type: application/x-zip-compressed\r\n\r\n\r\n------WebKitFormBoundaryzPzOocHYeAxPSdub--\r\n",
+    "method": "POST"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/groups/52/children",
+{
+    "headers": {
+        "accept": "*/*",
+        "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "application/json",
+        "pragma": "no-cache",
+        "priority": "u=1, i",
+        "route": "/documents/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "cookie": "language=pt_BR; JSESSIONID=94644E7E84BDE7E46C429F8F58BFD37D; logged-user-id=SES50002; company-id=17",
+        "Referer": "https://mvtst1.saude.go.gov.br/editor/index.html"
+    },
+    "body": null,
+    "method": "GET"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/documents?groupId=53",
+{
+    "headers": {
+        "accept": "*/*",
+        "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "application/json",
+        "pragma": "no-cache",
+        "priority": "u=1, i",
+        "route": "/documents/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "cookie": "language=pt_BR; JSESSIONID=94644E7E84BDE7E46C429F8F58BFD37D; logged-user-id=SES50002; company-id=17",
+        "Referer": "https://mvtst1.saude.go.gov.br/editor/index.html"
+    },
+    "body": null,
+    "method": "GET"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/documents/paginated?pageNumber=1&pageSize=10&sortBy=id&groupId=53&type=DOC",
+{
+    "headers": {
+        "accept": "*/*",
+        "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "application/json",
+        "pragma": "no-cache",
+        "priority": "u=1, i",
+        "route": "/documents/",
+        "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "cookie": "language=pt_BR; JSESSIONID=94644E7E84BDE7E46C429F8F58BFD37D; logged-user-id=SES50002; company-id=17",
+        "Referer": "https://mvtst1.saude.go.gov.br/editor/index.html"
+    },
+    "body": null,
+    "method": "GET"
+});

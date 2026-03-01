@@ -1,0 +1,95 @@
+// [MV-Antigravity] Analisador de Anatomia de Erro de Rede (Protocolo VT-3)
+(function () {
+    console.log("[ANTIGRAVITY] Interceptor de Rede Inicializado. Aguardando tráfego de upload...");
+
+    // Interceptando chamadas FETCH
+    const originalFetch = window.fetch;
+    window.fetch = async function (...args) {
+        const response = await originalFetch.apply(this, args);
+        clonarEAnalisarResposta(response.clone(), args[0]);
+        return response;
+    };
+
+    // Interceptando chamadas XHR (Comum no MV legado)
+    const XHR = XMLHttpRequest.prototype;
+    const open = XHR.open;
+    const send = XHR.send;
+
+    XHR.open = function (method, url) {
+        this._url = url;
+        return open.apply(this, arguments);
+    };
+
+    XHR.send = function (postData) {
+        this.addEventListener('load', function () {
+            // Filtra para pegar apenas as requisições do Editor
+            if (this._url.includes('/editor') || this._url.includes('/upload') || this._url.includes('documento')) {
+                console.groupCollapsed(`[ANATOMIA DO ERRO] Requisição interceptada: ${this._url}`);
+                console.log("Status HTTP:", this.status);
+
+                try {
+                    // Tenta parsear a resposta bruta do JBoss/Wildfly
+                    const rawResponse = this.responseText;
+                    if (rawResponse.includes("Exception") || rawResponse.includes("Error")) {
+                        console.error("🔥 STACK TRACE OU ERRO BRUTO CAPTURADO:");
+                        console.log(rawResponse);
+                    } else {
+                        const jsonResponse = JSON.parse(rawResponse);
+                        console.dir(jsonResponse);
+                    }
+                } catch (e) {
+                    console.log("Resposta Bruta (Não-JSON):", this.responseText);
+                }
+                console.groupEnd();
+            }
+        });
+        return send.apply(this, arguments);
+    };
+
+    async function clonarEAnalisarResposta(responseClone, url) {
+        if (typeof url === 'string' && (url.includes('/editor') || url.includes('/upload'))) {
+            const text = await responseClone.text();
+            console.groupCollapsed(`[ANATOMIA DO ERRO FETCH] Requisição interceptada: ${url}`);
+            console.log("Status HTTP:", responseClone.status);
+            console.log("Payload Bruto do Servidor:", text);
+            console.groupEnd();
+        }
+    }
+})();
+VM134: 3[ANTIGRAVITY] Interceptor de Rede Inicializado.Aguardando tráfego de upload...
+undefined
+VM112: 7[INTERCEPTADO]: Modificando átomos de ficha_ambulatorial_1_REV_2026.zip para evitar conflito...
+VM88: 35[FORM_DATA_APPEND]: files
+VM88: 37 > Arquivo: ficha_ambulatorial_1_REV_2026.zip(44281 bytes)
+VM88: 40[AVISO]: Nomes de arquivo em minúsculo podem causar erro de importação no Linux / JBoss.
+    VM65: 6[EVIDÊNCIA CAPTURADA]: UPLOAD_ATTEMPT
+VM65: 6[EVIDÊNCIA CAPTURADA]: ERRO_200_CONFLICT
+VM101: 25  🛑 ÁTOMO DO CONFLITO ENCONTRADO
+VM101: 31 Mensagem do Servidor: Arquivo(s) enviado(s) com sucesso.Mas há erros na importação dos arquivos!
+VM101: 39 Validações de Campo Rejeitadas:
+VM101: 40
+    (index)
+Value
+0	'O arquivo não é válido! O arquivo esperado é do tipo Documento.'
+Array(1)
+VM134: 52[ANATOMIA DO ERRO FETCH] Requisição interceptada: designer / api /import /uploadFiles/53
+VM134: 53 Status HTTP: 200
+VM134: 54 Payload Bruto do Servidor: { "status": "CONFLICT", "data": { "success": [], "errors": ["O arquivo não é válido! O arquivo esperado é do tipo Documento."], "information": [] }, "message": "Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!", "errors": null }
+VM112: 7[INTERCEPTADO]: Modificando átomos de 0047_278_validacao_staff_1_1.zip para evitar conflito...
+VM88: 35[FORM_DATA_APPEND]: files
+VM88: 37 > Arquivo: 0047_278_validacao_staff_1_1.zip(999111 bytes)
+VM88: 40[AVISO]: Nomes de arquivo em minúsculo podem causar erro de importação no Linux / JBoss.
+    VM65: 6[EVIDÊNCIA CAPTURADA]: UPLOAD_ATTEMPT
+VM65: 6[EVIDÊNCIA CAPTURADA]: ERRO_200_CONFLICT
+VM101: 25  🛑 ÁTOMO DO CONFLITO ENCONTRADO
+VM101: 31 Mensagem do Servidor: Arquivo(s) enviado(s) com sucesso.Mas há erros na importação dos arquivos!
+VM101: 39 Validações de Campo Rejeitadas:
+VM101: 40
+    (index)
+Value
+0	'Nome de documento duplicado. > Cabeçalho SES GO <'
+1	'Erro ao importar o arquivo "5.documents_validacao_…e.setValue(String)" because "imported" is null ).'
+Array(2)
+VM134: 52[ANATOMIA DO ERRO FETCH] Requisição interceptada: designer / api /import /uploadFiles/53
+VM134: 53 Status HTTP: 200
+VM134: 54 Payload Bruto do Servidor: { "status": "CONFLICT", "data": { "success": ["Rodapé importado com sucesso para o grupo \"Cabeçalhos e Rodapés Local - Rodapés Importados\"! Foi criado um Rodapé cujo id é \"164\", identificador é \"RODAPE_SES_GO_V.24\" e nome é \"RODAPE_SES_GO_V.14\"."], "errors": ["Nome de documento duplicado.  > Cabeçalho SES GO <", "Erro ao importar o arquivo \"5.documents_validacao_1_10.edt\" de tipo \"Documento\". Identificador: > validacao_1_1 <: \r\n Erro durante a criação dos metadados ( Cannot invoke \"br.com.mv.liberty.editor3.domain.FieldPropertyValue.setValue(String)\" because \"imported\" is null )."], "information": [{ "id": 164, "name": "RODAPE_SES_GO_V.14", "identifier": "RODAPE_SES_GO_V.24", "groupName": "Cabeçalhos e Rodapés Local - Rodapés Importados", "type": "FOOTER" }] }, "message": "Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!", "errors": null }

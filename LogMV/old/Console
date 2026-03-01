@@ -1,0 +1,200 @@
+opensans - regular - webfont.woff2: 1  Failed to load resource: the server responded with a status of 404()
+index.c89a4594.js: 141 Application session started
+opensans - regular - webfont.woff: 1  Failed to load resource: the server responded with a status of 404()
+designer / api / mv - permissions: 1  Failed to load resource: the server responded with a status of 401()
+api / is - multi - tenant: 1  Failed to load resource: the server responded with a status of 404()
+index.c89a4594.js: 141 Uncaught(in promise) Array(1)
+allow pasting
+    (function () {
+        const originalFetch = window.fetch;
+        window.fetch = async (...args) => {
+            const response = await originalFetch(...args);
+            const clone = response.clone();
+
+            if (args[0].includes('/api/documents') || args[0].includes('/api/import')) {
+                console.group(`%c MV-Antigravity Inspector: ${args[1]?.method || 'GET'}`, 'color: #00ff00; font-weight: bold;');
+                console.log('URL:', args[0]);
+
+                if (args[1]?.body) {
+                    console.log('Payload Enviado (Analise o JSON aqui):', args[1].body);
+                }
+
+                clone.json().then(data => {
+                    console.log('Resposta do Servidor (Oracle/Java):', data);
+                    if (data.message || data.error || data.exception) {
+                        console.error('ERRO DETECTADO:', data.message || data.exception);
+                        // Verificação de Inconsistência de Schema
+                        if (JSON.stringify(data).includes('ORA-')) {
+                            console.warn('FALHA DE INTEGRIDADE NO ORACLE: Verifique constraints de CD_PROPRIEDADE.');
+                        }
+                    }
+                }).catch(() => {
+                    clone.text().then(text => console.log('Resposta (Texto):', text));
+                });
+                console.groupEnd();
+            }
+            return response;
+        };
+        console.log('%c [MV-Antigravity] Monitor de Tráfego Ativado. Aguardando falha na IDE...', 'color: #00ffff');
+    })();
+VM139: 31[MV - Antigravity] Monitor de Tráfego Ativado.Aguardando falha na IDE...
+undefined
+VM139: 8  MV - Antigravity Inspector: POST
+VM139: 9 URL: designer / api /import /uploadFiles/53
+VM139: 12 Payload Enviado(Analise o JSON aqui): FormData { }
+VM139: 16 Resposta do Servidor(Oracle / Java): { status: 'CONFLICT', data: {… }, message: 'Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!', errors: null }
+VM139: 18 ERRO DETECTADO: Arquivo(s) enviado(s) com sucesso.Mas há erros na importação dos arquivos!
+    (anonymous) @VM139: 18
+Promise.then
+window.fetch @VM139: 15
+await in window.fetch
+Se @index.c89a4594.js: 5
+importDocuments @index.c89a4594.js: 141
+    (anonymous) @index.c89a4594.js: 141
+$o.dispatch @index.c89a4594.js: 141
+dispatch @index.c89a4594.js: 141
+    (anonymous) @index.c89a4594.js: 141
+e.onchange @pg-dashboard.4a8c2c3d.js: 1
+VM139: 8  MV - Antigravity Inspector: GET
+VM139: 9 URL: designer / api / documents ? groupId = 53
+VM139: 16 Resposta do Servidor(Oracle / Java): { status: 'OK', data: Array(1), message: null, errors: null }
+VM139: 8  MV - Antigravity Inspector: GET
+VM139: 9 URL: designer / api / documents / paginated ? pageNumber = 1 & pageSize=10 & sortBy=id & groupId=53 & type=DOC
+VM139: 16 Resposta do Servidor(Oracle / Java): { size: 10, totalPages: 1, numberOfElements: 1, totalElements: 1, data: Array(1), … }
+
+[MV - Antigravity] Iniciando Extração de Validações Cruzadas...
+undefined
+VM139: 8  MV - Antigravity Inspector: POST
+VM139: 9 URL: designer / api /import /uploadFiles/53
+VM139: 12 Payload Enviado(Analise o JSON aqui): FormData { }
+VM139: 16 Resposta do Servidor(Oracle / Java): { status: 'CONFLICT', data: {… }, message: 'Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!', errors: null }
+VM139: 18 ERRO DETECTADO: Arquivo(s) enviado(s) com sucesso.Mas há erros na importação dos arquivos!
+    (anonymous) @VM139: 18
+Promise.then
+window.fetch @VM139: 15
+await in window.fetch
+window.fetch @VM145: 8
+Se @index.c89a4594.js: 5
+importDocuments @index.c89a4594.js: 141
+    (anonymous) @index.c89a4594.js: 141
+$o.dispatch @index.c89a4594.js: 141
+dispatch @index.c89a4594.js: 141
+    (anonymous) @index.c89a4594.js: 141
+e.onchange @pg-dashboard.4a8c2c3d.js: 1
+VM139: 8  MV - Antigravity Inspector: GET
+VM139: 9 URL: designer / api / documents ? groupId = 53
+VM139: 16 Resposta do Servidor(Oracle / Java): { status: 'OK', data: Array(1), message: null, errors: null }
+VM139: 8  MV - Antigravity Inspector: GET
+VM139: 9 URL: designer / api / documents / paginated ? pageNumber = 1 & pageSize=10 & sortBy=id & groupId=53 & type=DOC
+VM139: 16 Resposta do Servidor(Oracle / Java): { size: 10, totalPages: 1, numberOfElements: 1, totalElements: 1, data: Array(1), … }
+
+// Execute isso após o erro de CONFLICT aparecer
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/import/uploadFiles/53").then(r => r.json()).then(d => {
+    console.log("%c DETALHAMENTO DO CONFLITO:", "color: yellow; background: red; font-weight: bold;");
+    console.table(d.data.errors || d.data);
+});
+Promise {
+    <pending>}
+        index.c89a4594.js:141  GET https://mvtst1.saude.go.gov.br/editor/designer/api/import/uploadFiles/53 500 (Internal Server Error)
+        env.fetch @ index.c89a4594.js:141
+        window.fetch @ VM139:4
+        window.fetch @ VM145:8
+        (anonymous) @ VM161:2Understand this error
+        VM139:8  MV-Antigravity Inspector: GET
+        VM139:9 URL: https://mvtst1.saude.go.gov.br/editor/designer/api/import/uploadFiles/53
+        VM161:3  DETALHAMENTO DO CONFLITO:
+        VM145:12  🚨 FALHA DE VALIDAÇÃO DETECTADA
+        VM145:13 Status: 500
+        (anonymous) @ VM145:13
+        Promise.then
+        window.fetch @ VM145:11
+        await in window.fetch
+        (anonymous) @ VM161:2
+        VM145:14 O que o sistema esperava: Verifique o campo "exception" abaixo
+        (anonymous) @ VM145:14
+        Promise.then
+        window.fetch @ VM145:11
+        await in window.fetch
+        (anonymous) @ VM161:2
+        VM145:15 Object
+        VM139:16 Resposta do Servidor (Oracle/Java): {status: 'INTERNAL_SERVER_ERROR', uuid: '90dc34ff-a48d-4599-898b-9283236e9e97', code: null, message: 'O sistema não concluiu a operação por conta de um …e o código: 90dc34ff-a48d-4599-898b-9283236e9e97.', errors: Array(0)}
+        VM139:18 ERRO DETECTADO: O sistema não concluiu a operação por conta de um problema interno. Entre em contato com a MV e informe o código: 90dc34ff-a48d-4599-898b-9283236e9e97.
+        (anonymous) @ VM139:18
+        Promise.then
+        window.fetch @ VM139:15
+        await in window.fetch
+        window.fetch @ VM145:8
+        (anonymous) @ VM161:2
+        VM161:4 Uncaught (in promise) TypeError: Cannot read properties of undefined (reading 'errors')
+        at <anonymous>:4:26
+
+            [MV-Antigravity] Monitor de Depuração Profunda Iniciado
+            undefined
+            VM164:13  [ARQUIVO ENVIADO]: COMBO_TESTE0.zip, Tamanho: 3954 bytes
+            VM139:8  MV-Antigravity Inspector: POST
+            VM139:9 URL: designer/api/import/uploadFiles/53
+            VM139:12 Payload Enviado (Analise o JSON aqui): FormData { }
+            VM139:16 Resposta do Servidor (Oracle/Java): {status: 'CONFLICT', data: {…}, message: 'Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!', errors: null}
+            VM139:18 ERRO DETECTADO: Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!
+            (anonymous) @ VM139:18
+            Promise.then
+            window.fetch @ VM139:15
+            await in window.fetch
+            window.fetch @ VM145:8
+            window.fetch @ VM164:20
+            Se @ index.c89a4594.js:5
+            importDocuments @ index.c89a4594.js:141
+            (anonymous) @ index.c89a4594.js:141
+            $o.dispatch @ index.c89a4594.js:141
+            dispatch @ index.c89a4594.js:141
+            (anonymous) @ index.c89a4594.js:141
+            e.onchange @ pg-dashboard.4a8c2c3d.js:1
+            VM139:8  MV-Antigravity Inspector: GET
+            VM139:9 URL: designer/api/documents/paginated?pageNumber=1&pageSize=10&sortBy=id&groupId=53&type=DOC
+            VM139:8  MV-Antigravity Inspector: GET
+            VM139:9 URL: designer/api/documents?groupId=53
+            VM139:16 Resposta do Servidor (Oracle/Java): {size: 10, totalPages: 1, numberOfElements: 1, totalElements: 1, data: Array(1), …}
+            VM139:16 Resposta do Servidor (Oracle/Java): {status: 'OK', data: Array(1), message: null, errors: null}
+
+            / Localizador de Inconsistências Ocultas
+(async () => {
+    const response = await fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/documents/paginated?pageNumber=1&pageSize=10&sortBy=id&groupId=53&type=DOC");
+            const docData = await response.json();
+
+            console.group("%c [MV-Antigravity] Análise de Inconsistência Crítica", "color: #ffaa00; font-weight: bold;");
+            console.log("Verificando se o documento subiu parcialmente...");
+            console.table(docData.data);
+
+            console.warn("⚠️  Atenção: Se a tabela acima estiver vazia ou com apenas 1 item antigo, o erro está em:");
+            console.log("1. XML/JSON malformado (Tags não fechadas)");
+            console.log("2. Referência de CD_PROPRIEDADE inexistente no Oracle");
+            console.log("3. Campo 'required' do banco EDITOR_CUSTOM vindo nulo");
+            console.groupEnd();
+})();
+            Promise {<pending>}
+                VM139:8  MV-Antigravity Inspector: GET
+                VM139:9 URL: https://mvtst1.saude.go.gov.br/editor/designer/api/documents/paginated?pageNumber=1&pageSize=10&sortBy=id&groupId=53&type=DOC
+                VM171:6  [MV-Antigravity] Análise de Inconsistência Crítica
+                VM171:7 Verificando se o documento subiu parcialmente...
+                VM171:8
+                (index)
+                id
+                groupId
+                groupName
+                parentGroupName
+                parentGroupItemType
+                identifier
+                name
+                propertyDocumentValues
+                tags
+                itemType
+                0	30	53	'Farmacia'	'Ambulatório'	'G_REP_DOC'	'Reconciliacao_Medicamentosa'	'(INATIVO) REG 395 - Reconciliação Medicamentosa'	Array(4)	Array(0)	{…}
+                Array(1)
+                VM171:10 ⚠️  Atenção: Se a tabela acima estiver vazia ou com apenas 1 item antigo, o erro está em:
+                VM171:11 1. XML/JSON malformado (Tags não fechadas)
+                VM171:12 2. Referência de CD_PROPRIEDADE inexistente no Oracle
+                VM171:13 3. Campo 'required' do banco EDITOR_CUSTOM vindo nulo
+                VM139:16 Resposta do Servidor (Oracle/Java):
+                {size: 10, totalPages: 1, numberOfElements: 1, totalElements: 1, data: Array(1), …}
+
+

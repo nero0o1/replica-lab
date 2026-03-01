@@ -1,0 +1,101 @@
+ [MV-Antigravity] Operação Deep Inquisitor: Forçando Verbocidade...
+undefined
+VM270:7  [INTERCEPTADO]: Modificando átomos de COMBO_TESTE0.zip para evitar conflito...
+VM240:35  [FORM_DATA_APPEND]: files
+VM240:37  > Arquivo: COMBO_TESTE0.zip (9394 bytes)
+VM240:40  [AVISO]: Nomes de arquivo em minúsculo podem causar erro de importação no Linux/JBoss.
+VM229:6 [EVIDÊNCIA CAPTURADA]: UPLOAD_ATTEMPT
+VM229:6 [EVIDÊNCIA CAPTURADA]: ERRO_200_CONFLICT
+VM254:25  🛑 ÁTOMO DO CONFLITO ENCONTRADO
+VM254:31 Mensagem do Servidor: Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!
+VM254:39 Validações de Campo Rejeitadas:
+VM254:40 
+(index)
+Value
+0	'O arquivo não é válido! O arquivo esperado é do tipo Documento.'
+Array(1)
+VM278:21  🕵️ DETALHAMENTO DE CONFLITO PROFUNDO
+VM278:25 Campos de Retorno (RAW): 
+{status: 'CONFLICT', data: {…}, message: 'Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!', errors: null}
+VM278:28 Analisando estrutura 'data' em busca de metadados ocultos...
+VM278:30 Chave: success | Valor: 
+[]
+VM278:30 Chave: errors | Valor: 
+['O arquivo não é válido! O arquivo esperado é do tipo Documento.']
+VM278:30 Chave: information | Valor: 
+[]
+VM278:21  🕵️ DETALHAMENTO DE CONFLITO PROFUNDO
+VM278:21  🕵️ DETALHAMENTO DE CONFLITO PROFUNDO
+VM278:25 Campos de Retorno (RAW): 
+{status: 'OK', data: Array(1), message: null, errors: null}
+VM278:28 Analisando estrutura 'data' em busca de metadados ocultos...
+VM278:30 Chave: 0 | Valor: 
+{id: 30, groupId: 53, groupName: 'Farmacia', parentGroupName: 'Ambulatório', parentGroupItemType: 'G_REP_DOC', …}
+VM278:21  🕵️ DETALHAMENTO DE CONFLITO PROFUNDO
+VM278:25 Campos de Retorno (RAW): 
+{status: 'OK', data: Array(1), message: null, errors: null}
+VM278:28 Analisando estrutura 'data' em busca de metadados ocultos...
+VM278:30 Chave: 0 | Valor: 
+{id: 53, name: 'Farmacia', itemType: {…}, keyTranslate: null, parentGroup: {…}, …}
+VM278:25 Campos de Retorno (RAW): 
+{size: 10, totalPages: 1, numberOfElements: 1, totalElements: 1, data: Array(1), …}
+VM278:28 Analisando estrutura 'data' em busca de metadados ocultos...
+VM278:30 Chave: 0 | Valor: 
+{id: 30, groupId: 53, groupName: 'Farmacia', parentGroupName: 'Ambulatório', parentGroupItemType: 'G_REP_DOC', …}
+VM270:7  [INTERCEPTADO]: Modificando átomos de 0038_104_NRS-2002_ADULTO.zip para evitar conflito...
+VM240:35  [FORM_DATA_APPEND]: files
+VM240:37  > Arquivo: 0038_104_NRS-2002_ADULTO.zip (1056175 bytes)
+VM240:40  [AVISO]: Nomes de arquivo em minúsculo podem causar erro de importação no Linux/JBoss.
+VM229:6 [EVIDÊNCIA CAPTURADA]: UPLOAD_ATTEMPT
+VM229:6 [EVIDÊNCIA CAPTURADA]: ERRO_200_CONFLICT
+VM254:25  🛑 ÁTOMO DO CONFLITO ENCONTRADO
+VM254:31 Mensagem do Servidor: Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!
+VM254:39 Validações de Campo Rejeitadas:
+VM254:40 
+(index)
+Value
+0	'Nome de documento duplicado. > Cabeçalho SES GO <'
+1	'Erro ao importar o arquivo "5.documents_NRS2002_AD…e.setValue(String)" because "imported" is null ).'
+Array(2)
+VM278:21  🕵️ DETALHAMENTO DE CONFLITO PROFUNDO
+VM278:25 Campos de Retorno (RAW): 
+{status: 'CONFLICT', data: {…}, message: 'Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!', errors: null}
+VM278:28 Analisando estrutura 'data' em busca de metadados ocultos...
+VM278:30 Chave: success | Valor: 
+['Rodapé importado com sucesso para o grupo "Cabeçal…ODAPE_SES_GO_V.23" e nome é "RODAPE_SES_GO_V.13".']
+VM278:30 Chave: errors | Valor: 
+(2) ['Nome de documento duplicado.  > Cabeçalho SES GO <', 'Erro ao importar o arquivo "5.documents_NRS2002_AD…e.setValue(String)" because "imported" is null ).']
+VM278:30 Chave: information | Valor: 
+[{…}]
+VM278:21  🕵️ DETALHAMENTO DE CONFLITO PROFUNDO
+VM278:25 Campos de Retorno (RAW): 
+{status: 'OK', data: Array(1), message: null, errors: null}
+VM278:28 Analisando estrutura 'data' em busca de metadados ocultos...
+VM278:30 Chave: 0 | Valor: 
+{id: 53, name: 'Farmacia', itemType: {…}, keyTranslate: null, parentGroup: {…}, …}
+VM278:21  🕵️ DETALHAMENTO DE CONFLITO PROFUNDO
+VM278:25 Campos de Retorno (RAW): 
+{size: 10, totalPages: 1, numberOfElements: 1, totalElements: 1, data: Array(1), …}
+VM278:28 Analisando estrutura 'data' em busca de metadados ocultos...
+VM278:30 Chave: 0 | Valor: 
+{id: 30, groupId: 53, groupName: 'Farmacia', parentGroupName: 'Ambulatório', parentGroupItemType: 'G_REP_DOC', …}
+VM278:21  🕵️ DETALHAMENTO DE CONFLITO PROFUNDO
+VM278:25 Campos de Retorno (RAW): 
+{status: 'OK', data: Array(1), message: null, errors: null}
+VM278:28 Analisando estrutura 'data' em busca de metadados ocultos...
+VM278:30 Chave: 0 | Valor: 
+{id: 30, groupId: 53, groupName: 'Farmacia', parentGroupName: 'Ambulatório', parentGroupItemType: 'G_REP_DOC', …}etch("https://mvtst1.saude.go.gov.br/editor/designer/api/documents/paginated?pageNumber=1&pageSize=50&groupId=53&type=DOC")
+    .then(r => r.json())
+    .then(res => {
+        console.log("%c [MAPA DE IDENTIFICADORES EXISTENTES]", "color: white; background: blue;");
+        res.data.forEach(doc => {
+            console.log(`ID: ${doc.id} | Identificador: ${doc.identifier} | Nome: ${doc.name}`);
+        });
+    });
+Promise {<pending>}
+VM278:21  🕵️ DETALHAMENTO DE CONFLITO PROFUNDO
+VM278:25 Campos de Retorno (RAW): {size: 50, totalPages: 1, numberOfElements: 1, totalElements: 1, data: Array(1), …}
+VM278:28 Analisando estrutura 'data' em busca de metadados ocultos...
+VM278:30 Chave: 0 | Valor: {id: 30, groupId: 53, groupName: 'Farmacia', parentGroupName: 'Ambulatório', parentGroupItemType: 'G_REP_DOC', …}
+VM287:4  [MAPA DE IDENTIFICADORES EXISTENTES]
+VM287:6 ID: 30 | Identificador: Reconciliacao_Medicamentosa | Nome: (INATIVO) REG 395 - Reconciliação Medicamentosa

@@ -1,0 +1,74 @@
+﻿
+VM254:40 
+(index)
+Value
+0	'Nome de documento duplicado. > Cabeçalho SES GO <'
+1	'Erro ao importar o arquivo "5.documents_APAC0.edt"…e.setValue(String)" because "imported" is null ).'
+Array(2)
+0
+: 
+"Nome de documento duplicado.  > Cabeçalho SES GO <"
+1
+: 
+"Erro ao importar o arquivo \"5.documents_APAC0.edt\" de tipo \"Documento\". Identificador: > APAC <: \r\n Erro durante a criação dos metadados ( Cannot invoke \"br.com.mv.liberty.editor3.domain.FieldPropertyValue.setValue(String)\" because \"imported\" is null )."
+length
+: 
+2
+[[Prototype]]
+: 
+Array(0)
+VM240:35  [FORM_DATA_APPEND]: files
+VM240:37  > Arquivo: 0010_93_AIH_SES.zip (96571 bytes)
+VM240:40  [AVISO]: Nomes de arquivo em minúsculo podem causar erro de importação no Linux/JBoss.
+VM229:6 [EVIDÊNCIA CAPTURADA]: UPLOAD_ATTEMPT
+VM229:6 [EVIDÊNCIA CAPTURADA]: ERRO_200_CONFLICT
+VM254:25  🛑 ÁTOMO DO CONFLITO ENCONTRADO
+VM254:31 Mensagem do Servidor: Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!
+VM254:39 Validações de Campo Rejeitadas:
+VM254:40 
+(index)
+Value
+0	'Erro ao importar o arquivo "5.documents_AIH_SES0.e…e.setValue(String)" because "imported" is null ).'
+Array(1)
+0
+: 
+"Erro ao importar o arquivo \"5.documents_AIH_SES0.edt\" de tipo \"Documento\". Identificador: > AIH_SES <: \r\n Erro durante a criação dos metadados ( Cannot invoke \"br.com.mv.liberty.editor3.domain.FieldPropertyValue.setValue(String)\" because \"imported\" is null )."
+length
+: 
+1
+[[Prototype]]
+: 
+Array(0)
+VM240:35  [FORM_DATA_APPEND]: files
+VM240:37  > Arquivo: 0014_183_ficha_ambulatorial_1.zip (1003658 bytes)
+VM240:40  [AVISO]: Nomes de arquivo em minúsculo podem causar erro de importação no Linux/JBoss.
+VM229:6 [EVIDÊNCIA CAPTURADA]: UPLOAD_ATTEMPT
+VM229:6 [EVIDÊNCIA CAPTURADA]: ERRO_200_CONFLICT
+VM254:25  🛑 ÁTOMO DO CONFLITO ENCONTRADO
+VM254:31 Mensagem do Servidor: Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!
+VM254:39 Validações de Campo Rejeitadas:
+VM254:40 
+(index)
+Value
+0	'Nome de documento duplicado. > Cabeçalho SES GO <'
+1	'Erro ao importar o arquivo "5.documents_ficha_ambu…e.setValue(String)" because "imported" is null ).'
+Array(2)
+0
+: 
+"Nome de documento duplicado.  > Cabeçalho SES GO <"
+1
+: 
+"Erro ao importar o arquivo \"5.documents_ficha_ambulatorial_10.edt\" de tipo \"Documento\". Identificador: > ficha_ambulatorial_1 <: \r\n Erro durante a criação dos metadados ( Cannot invoke \"br.com.mv.liberty.editor3.domain.FieldPropertyValue.setValue(String)\" because \"imported\" is null )."
+length
+: 
+2
+[[Prototype]]
+: 
+Array(0)
+﻿
+
+ [MV-Antigravity] Aplicando Patch de Correção FieldPropertyValue...
+VM270:17  >>> COLOQUE ISSO NO SEU JSON ANTES DE ZIPAR <<<
+VM270:18 1. Altere o 'name' de 'Cabeçalho SES GO' para 'Cabeçalho SES GO_NOVO'
+VM270:19 2. No array 'propertyDocumentValues', garanta que não existam objetos nulos.
+VM270:20 3. Altere o 'identifier' para algo como 'APAC_TESTE_1' para quebrar o conflito.

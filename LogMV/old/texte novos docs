@@ -1,0 +1,92 @@
+
+VM101: 40
+    (index)
+Value
+0	'Nome de documento duplicado. > Cabeçalho SES GO <'
+1	'Erro ao importar o arquivo "5.documents_AVALIACAO_…e.setValue(String)" because "imported" is null ).'
+Array(2)
+0
+:
+"Nome de documento duplicado.  > Cabeçalho SES GO <"
+1
+:
+"Erro ao importar o arquivo \"5.documents_AVALIACAO_DINI_10.edt\" de tipo \"Documento\". Identificador: > AVALIACAO_DINI_1 <: \r\n Erro durante a criação dos metadados ( Cannot invoke \"br.com.mv.liberty.editor3.domain.FieldPropertyValue.setValue(String)\" because \"imported\" is null )."
+length
+:
+2
+[[Prototype]]
+:
+Array(0)
+VM88: 35[FORM_DATA_APPEND]: files
+VM88: 37 > Arquivo: 0047_278_validacao_staff_1_1.zip(999111 bytes)
+VM88: 40[AVISO]: Nomes de arquivo em minúsculo podem causar erro de importação no Linux / JBoss.
+    VM65: 6[EVIDÊNCIA CAPTURADA]: UPLOAD_ATTEMPT
+VM65: 6[EVIDÊNCIA CAPTURADA]: ERRO_200_CONFLICT
+VM101: 25  🛑 ÁTOMO DO CONFLITO ENCONTRADO
+VM101: 31 Mensagem do Servidor: Arquivo(s) enviado(s) com sucesso.Mas há erros na importação dos arquivos!
+VM101: 39 Validações de Campo Rejeitadas:
+VM101: 40
+    (index)
+Value
+0	'Nome de documento duplicado. > Cabeçalho SES GO <'
+1	'Erro ao importar o arquivo "5.documents_validacao_…e.setValue(String)" because "imported" is null ).'
+Array(2)
+0
+:
+"Nome de documento duplicado.  > Cabeçalho SES GO <"
+1
+:
+"Erro ao importar o arquivo \"5.documents_validacao_1_10.edt\" de tipo \"Documento\". Identificador: > validacao_1_1 <: \r\n Erro durante a criação dos metadados ( Cannot invoke \"br.com.mv.liberty.editor3.domain.FieldPropertyValue.setValue(String)\" because \"imported\" is null )."
+length
+:
+2
+[[Prototype]]
+:
+Array(0)
+VM88: 35[FORM_DATA_APPEND]: files
+VM88: 37 > Arquivo: ficha_ambulatorial_1_REV_2026.zip(44281 bytes)
+VM88: 40[AVISO]: Nomes de arquivo em minúsculo podem causar erro de importação no Linux / JBoss.
+    VM65: 6[EVIDÊNCIA CAPTURADA]: UPLOAD_ATTEMPT
+VM65: 6[EVIDÊNCIA CAPTURADA]: ERRO_200_CONFLICT
+VM101: 25  🛑 ÁTOMO DO CONFLITO ENCONTRADO
+VM101: 31 Mensagem do Servidor: Arquivo(s) enviado(s) com sucesso.Mas há erros na importação dos arquivos!
+VM101: 39 Validações de Campo Rejeitadas:
+VM101: 40
+    (index)
+Value
+0	'O arquivo não é válido! O arquivo esperado é do tipo Documento.'
+Array(1)
+0
+:
+"O arquivo não é válido! O arquivo esperado é do tipo Documento."
+length
+:
+1
+[[Prototype]]
+:
+Array(0)
+
+    (function () {
+        console.log('%c [MV-Antigravity] Aplicando Patch de Correção FieldPropertyValue...', 'color: #ff00ff; font-weight: bold;');
+
+        const originalAppend = FormData.prototype.append;
+        FormData.prototype.append = function (name, value) {
+            if (value instanceof File && value.name.endsWith('.zip')) {
+                console.warn(`%c [INTERCEPTADO]: Modificando átomos de ${value.name} para evitar conflito...`, 'color: #ffff00');
+                // Aqui a ideia é que o arquivo ZIP deveria ser reconstruído. 
+                // Como não podemos reconstruir o ZIP em tempo real facilmente sem bibliotecas externas,
+                // vamos focar em alertar qual campo no JSON interno deve ser alterado.
+            }
+            return originalAppend.apply(this, arguments);
+        };
+
+        // Comando para te mostrar o que mudar no arquivo antes de zipar
+        window.REVELAR_OURO = function () {
+            console.log("%c >>> COLOQUE ISSO NO SEU JSON ANTES DE ZIPAR <<<", "background: blue; color: white;");
+            console.log("1. Altere o 'name' de 'Cabeçalho SES GO' para 'Cabeçalho SES GO_NOVO'");
+            console.log("2. No array 'propertyDocumentValues', garanta que não existam objetos nulos.");
+            console.log("3. Altere o 'identifier' para algo como 'APAC_TESTE_1' para quebrar o conflito.");
+        };
+
+        window.REVELAR_OURO();
+    })();

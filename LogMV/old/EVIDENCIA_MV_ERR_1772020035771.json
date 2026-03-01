@@ -1,0 +1,144 @@
+[
+  {
+    "time": "2026-02-25T11:43:18.150Z",
+    "title": "UPLOAD_ATTEMPT",
+    "data": {
+      "url": "designer/api/import/uploadFiles/53",
+      "method": "POST"
+    }
+  },
+  {
+    "time": "2026-02-25T11:43:18.382Z",
+    "title": "ERRO_200_CONFLICT",
+    "data": {
+      "status": "CONFLICT",
+      "data": {
+        "success": [],
+        "errors": [
+          "O arquivo não é válido! O arquivo esperado é do tipo Documento."
+        ],
+        "information": []
+      },
+      "message": "Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!",
+      "errors": null
+    }
+  },
+  {
+    "time": "2026-02-25T11:43:29.304Z",
+    "title": "UPLOAD_ATTEMPT",
+    "data": {
+      "url": "designer/api/import/uploadFiles/53",
+      "method": "POST"
+    }
+  },
+  {
+    "time": "2026-02-25T11:43:30.454Z",
+    "title": "ERRO_200_CONFLICT",
+    "data": {
+      "status": "CONFLICT",
+      "data": {
+        "success": [],
+        "errors": [
+          "O arquivo não é válido! O arquivo esperado é do tipo Documento."
+        ],
+        "information": []
+      },
+      "message": "Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!",
+      "errors": null
+    }
+  },
+  {
+    "time": "2026-02-25T11:43:39.510Z",
+    "title": "UPLOAD_ATTEMPT",
+    "data": {
+      "url": "designer/api/import/uploadFiles/53",
+      "method": "POST"
+    }
+  },
+  {
+    "time": "2026-02-25T11:43:39.577Z",
+    "title": "ERRO_200_CONFLICT",
+    "data": {
+      "status": "CONFLICT",
+      "data": {
+        "success": [],
+        "errors": [
+          "O arquivo não é válido! O arquivo esperado é do tipo Documento."
+        ],
+        "information": []
+      },
+      "message": "Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!",
+      "errors": null
+    }
+  },
+  {
+    "time": "2026-02-25T11:43:59.936Z",
+    "title": "ERRO_400_BAD_REQUEST",
+    "data": {
+      "status": "BAD_REQUEST",
+      "uuid": null,
+      "code": "400",
+      "message": "Documento de código 305 não encontrado.",
+      "errors": []
+    }
+  },
+  {
+    "time": "2026-02-25T11:44:22.558Z",
+    "title": "UPLOAD_ATTEMPT",
+    "data": {
+      "url": "designer/api/import/uploadFiles/53",
+      "method": "POST"
+    }
+  },
+  {
+    "time": "2026-02-25T11:44:22.647Z",
+    "title": "ERRO_200_CONFLICT",
+    "data": {
+      "status": "CONFLICT",
+      "data": {
+        "success": [],
+        "errors": [
+          "O arquivo não é válido! O arquivo esperado é do tipo Documento."
+        ],
+        "information": []
+      },
+      "message": "Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!",
+      "errors": null
+    }
+  },
+  {
+    "time": "2026-02-25T11:44:48.327Z",
+    "title": "UPLOAD_ATTEMPT",
+    "data": {
+      "url": "designer/api/import/uploadFiles/53",
+      "method": "POST"
+    }
+  },
+  {
+    "time": "2026-02-25T11:44:49.604Z",
+    "title": "ERRO_200_CONFLICT",
+    "data": {
+      "status": "CONFLICT",
+      "data": {
+        "success": [
+          "Rodapé importado com sucesso para o grupo \"Cabeçalhos e Rodapés Local - Rodapés Importados\"! Foi criado um Rodapé cujo id é \"161\", identificador é \"RODAPE_SES_GO_V.23\" e nome é \"RODAPE_SES_GO_V.13\"."
+        ],
+        "errors": [
+          "Nome de documento duplicado.  > Cabeçalho SES GO <",
+          "Erro ao importar o arquivo \"5.documents_AVALIACAO_DINI_10.edt\" de tipo \"Documento\". Identificador: > AVALIACAO_DINI_1 <: \r\n Erro durante a criação dos metadados ( Cannot invoke \"br.com.mv.liberty.editor3.domain.FieldPropertyValue.setValue(String)\" because \"imported\" is null )."
+        ],
+        "information": [
+          {
+            "id": 161,
+            "name": "RODAPE_SES_GO_V.13",
+            "identifier": "RODAPE_SES_GO_V.23",
+            "groupName": "Cabeçalhos e Rodapés Local - Rodapés Importados",
+            "type": "FOOTER"
+          }
+        ]
+      },
+      "message": "Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!",
+      "errors": null
+    }
+  }
+]

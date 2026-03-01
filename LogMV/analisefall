@@ -1,0 +1,1305 @@
+{size: 10, totalPages: 1, numberOfElements: 1, totalElements: 1,…}
+
+data
+
+: 
+
+[{id: 30, groupId: 53, groupName: "Farmacia", parentGroupName: "Ambulatório",…}]
+
+0
+
+: 
+
+{id: 30, groupId: 53, groupName: "Farmacia", parentGroupName: "Ambulatório",…}
+
+groupId
+
+: 
+
+53
+
+groupName
+
+: 
+
+"Farmacia"
+
+id
+
+: 
+
+30
+
+identifier
+
+: 
+
+"Reconciliacao_Medicamentosa"
+
+itemType
+
+: 
+
+{id: 13, identifier: "DOC", description: "Documento", permissionModifyGroup: null}
+
+description
+
+: 
+
+"Documento"
+
+id
+
+: 
+
+13
+
+identifier
+
+: 
+
+"DOC"
+
+permissionModifyGroup
+
+: 
+
+null
+
+name
+
+: 
+
+"(INATIVO) REG 395 - Reconciliação Medicamentosa"
+
+parentGroupItemType
+
+: 
+
+"G_REP_DOC"
+
+parentGroupName
+
+: 
+
+"Ambulatório"
+
+propertyDocumentValues
+
+: 
+
+[{property: {id: 10, identifier: "criado_por", description: "Criado Por", defaultValue: null,…},…},…]
+
+0
+
+: 
+
+{property: {id: 10, identifier: "criado_por", description: "Criado Por", defaultValue: null,…},…}
+
+property
+
+: 
+
+{id: 10, identifier: "criado_por", description: "Criado Por", defaultValue: null,…}
+
+defaultValue
+
+: 
+
+null
+
+description
+
+: 
+
+"Criado Por"
+
+id
+
+: 
+
+10
+
+identifier
+
+: 
+
+"criado_por"
+
+keyTranslate
+
+: 
+
+"document.property.created.by"
+
+value
+
+: 
+
+"Migrador®"
+
+1
+
+: 
+
+{property: {id: 24, identifier: "criado_em", description: "Criado Em", defaultValue: null,…},…}
+
+property
+
+: 
+
+{id: 24, identifier: "criado_em", description: "Criado Em", defaultValue: null,…}
+
+defaultValue
+
+: 
+
+null
+
+description
+
+: 
+
+"Criado Em"
+
+id
+
+: 
+
+24
+
+identifier
+
+: 
+
+"criado_em"
+
+keyTranslate
+
+: 
+
+"document.property.created.in"
+
+value
+
+: 
+
+"2025-09-24 14:26:49"
+
+2
+
+: 
+
+{property: {id: 33, identifier: "importado", description: "Importado", defaultValue: null,…},…}
+
+property
+
+: 
+
+{id: 33, identifier: "importado", description: "Importado", defaultValue: null,…}
+
+defaultValue
+
+: 
+
+null
+
+description
+
+: 
+
+"Importado"
+
+id
+
+: 
+
+33
+
+identifier
+
+: 
+
+"importado"
+
+keyTranslate
+
+: 
+
+"document.property.imported"
+
+value
+
+: 
+
+"true"
+
+3
+
+: 
+
+{property: {id: 34, identifier: "migrado", description: "Migrado", defaultValue: null,…},…}
+
+property
+
+: 
+
+{id: 34, identifier: "migrado", description: "Migrado", defaultValue: null,…}
+
+defaultValue
+
+: 
+
+null
+
+description
+
+: 
+
+"Migrado"
+
+id
+
+: 
+
+34
+
+identifier
+
+: 
+
+"migrado"
+
+keyTranslate
+
+: 
+
+"document.property.migrated"
+
+value
+
+: 
+
+"true"
+
+tags
+
+: 
+
+[]
+
+first
+
+: 
+
+true
+
+last
+
+: 
+
+true
+
+numberOfElements
+
+: 
+
+1
+
+size
+
+: 
+
+10
+
+totalElements
+
+: 
+
+1
+
+totalPages
+
+: 
+
+1
+
+{
+
+    "size": 10,
+
+    "totalPages": 1,
+
+    "numberOfElements": 1,
+
+    "totalElements": 1,
+
+    "data": [
+
+        {
+
+            "id": 30,
+
+            "groupId": 53,
+
+            "groupName": "Farmacia",
+
+            "parentGroupName": "Ambulatório",
+
+            "parentGroupItemType": "G_REP_DOC",
+
+            "identifier": "Reconciliacao_Medicamentosa",
+
+            "name": "(INATIVO) REG 395 - Reconciliação Medicamentosa",
+
+            "propertyDocumentValues": [
+
+                {
+
+                    "property": {
+
+                        "id": 10,
+
+                        "identifier": "criado_por",
+
+                        "description": "Criado Por",
+
+                        "defaultValue": null,
+
+                        "keyTranslate": "document.property.created.by"
+
+                    },
+
+                    "value": "Migrador®"
+
+                },
+
+                {
+
+                    "property": {
+
+                        "id": 24,
+
+                        "identifier": "criado_em",
+
+                        "description": "Criado Em",
+
+                        "defaultValue": null,
+
+                        "keyTranslate": "document.property.created.in"
+
+                    },
+
+                    "value": "2025-09-24 14:26:49"
+
+                },
+
+                {
+
+                    "property": {
+
+                        "id": 33,
+
+                        "identifier": "importado",
+
+                        "description": "Importado",
+
+                        "defaultValue": null,
+
+                        "keyTranslate": "document.property.imported"
+
+                    },
+
+                    "value": "true"
+
+                },
+
+                {
+
+                    "property": {
+
+                        "id": 34,
+
+                        "identifier": "migrado",
+
+                        "description": "Migrado",
+
+                        "defaultValue": null,
+
+                        "keyTranslate": "document.property.migrated"
+
+                    },
+
+                    "value": "true"
+
+                }
+
+            ],
+
+            "tags": [],
+
+            "itemType": {
+
+                "id": 13,
+
+                "identifier": "DOC",
+
+                "description": "Documento",
+
+                "permissionModifyGroup": null
+
+            }
+
+        }
+
+    ],
+
+    "first": true,
+
+    "last": true
+
+}
+
+
+
+{status: "OK", data: [{id: 30, groupId: 53, groupName: "Farmacia", parentGroupName: "Ambulatório",…}],…}
+
+data
+
+: 
+
+[{id: 30, groupId: 53, groupName: "Farmacia", parentGroupName: "Ambulatório",…}]
+
+0
+
+: 
+
+{id: 30, groupId: 53, groupName: "Farmacia", parentGroupName: "Ambulatório",…}
+
+groupId
+
+: 
+
+53
+
+groupName
+
+: 
+
+"Farmacia"
+
+id
+
+: 
+
+30
+
+identifier
+
+: 
+
+"Reconciliacao_Medicamentosa"
+
+itemType
+
+: 
+
+{id: 13, identifier: "DOC", description: "Documento", permissionModifyGroup: null}
+
+description
+
+: 
+
+"Documento"
+
+id
+
+: 
+
+13
+
+identifier
+
+: 
+
+"DOC"
+
+permissionModifyGroup
+
+: 
+
+null
+
+name
+
+: 
+
+"(INATIVO) REG 395 - Reconciliação Medicamentosa"
+
+parentGroupItemType
+
+: 
+
+"G_REP_DOC"
+
+parentGroupName
+
+: 
+
+"Ambulatório"
+
+propertyDocumentValues
+
+: 
+
+[{property: {id: 10, identifier: "criado_por", description: "Criado Por", defaultValue: null,…},…},…]
+
+0
+
+: 
+
+{property: {id: 10, identifier: "criado_por", description: "Criado Por", defaultValue: null,…},…}
+
+property
+
+: 
+
+{id: 10, identifier: "criado_por", description: "Criado Por", defaultValue: null,…}
+
+defaultValue
+
+: 
+
+null
+
+description
+
+: 
+
+"Criado Por"
+
+id
+
+: 
+
+10
+
+identifier
+
+: 
+
+"criado_por"
+
+keyTranslate
+
+: 
+
+"document.property.created.by"
+
+value
+
+: 
+
+"Migrador®"
+
+1
+
+: 
+
+{property: {id: 24, identifier: "criado_em", description: "Criado Em", defaultValue: null,…},…}
+
+property
+
+: 
+
+{id: 24, identifier: "criado_em", description: "Criado Em", defaultValue: null,…}
+
+defaultValue
+
+: 
+
+null
+
+description
+
+: 
+
+"Criado Em"
+
+id
+
+: 
+
+24
+
+identifier
+
+: 
+
+"criado_em"
+
+keyTranslate
+
+: 
+
+"document.property.created.in"
+
+value
+
+: 
+
+"2025-09-24 14:26:49"
+
+2
+
+: 
+
+{property: {id: 33, identifier: "importado", description: "Importado", defaultValue: null,…},…}
+
+property
+
+: 
+
+{id: 33, identifier: "importado", description: "Importado", defaultValue: null,…}
+
+defaultValue
+
+: 
+
+null
+
+description
+
+: 
+
+"Importado"
+
+id
+
+: 
+
+33
+
+identifier
+
+: 
+
+"importado"
+
+keyTranslate
+
+: 
+
+"document.property.imported"
+
+value
+
+: 
+
+"true"
+
+3
+
+: 
+
+{property: {id: 34, identifier: "migrado", description: "Migrado", defaultValue: null,…},…}
+
+property
+
+: 
+
+{id: 34, identifier: "migrado", description: "Migrado", defaultValue: null,…}
+
+defaultValue
+
+: 
+
+null
+
+description
+
+: 
+
+"Migrado"
+
+id
+
+: 
+
+34
+
+identifier
+
+: 
+
+"migrado"
+
+keyTranslate
+
+: 
+
+"document.property.migrated"
+
+value
+
+: 
+
+"true"
+
+tags
+
+: 
+
+[]
+
+errors
+
+: 
+
+null
+
+message
+
+: 
+
+null
+
+status
+
+: 
+
+"OK"
+
+
+
+{
+
+    "status": "OK",
+
+    "data": [
+
+        {
+
+            "id": 30,
+
+            "groupId": 53,
+
+            "groupName": "Farmacia",
+
+            "parentGroupName": "Ambulatório",
+
+            "parentGroupItemType": "G_REP_DOC",
+
+            "identifier": "Reconciliacao_Medicamentosa",
+
+            "name": "(INATIVO) REG 395 - Reconciliação Medicamentosa",
+
+            "propertyDocumentValues": [
+
+                {
+
+                    "property": {
+
+                        "id": 10,
+
+                        "identifier": "criado_por",
+
+                        "description": "Criado Por",
+
+                        "defaultValue": null,
+
+                        "keyTranslate": "document.property.created.by"
+
+                    },
+
+                    "value": "Migrador®"
+
+                },
+
+                {
+
+                    "property": {
+
+                        "id": 24,
+
+                        "identifier": "criado_em",
+
+                        "description": "Criado Em",
+
+                        "defaultValue": null,
+
+                        "keyTranslate": "document.property.created.in"
+
+                    },
+
+                    "value": "2025-09-24 14:26:49"
+
+                },
+
+                {
+
+                    "property": {
+
+                        "id": 33,
+
+                        "identifier": "importado",
+
+                        "description": "Importado",
+
+                        "defaultValue": null,
+
+                        "keyTranslate": "document.property.imported"
+
+                    },
+
+                    "value": "true"
+
+                },
+
+                {
+
+                    "property": {
+
+                        "id": 34,
+
+                        "identifier": "migrado",
+
+                        "description": "Migrado",
+
+                        "defaultValue": null,
+
+                        "keyTranslate": "document.property.migrated"
+
+                    },
+
+                    "value": "true"
+
+                }
+
+            ],
+
+            "tags": [],
+
+            "itemType": {
+
+                "id": 13,
+
+                "identifier": "DOC",
+
+                "description": "Documento",
+
+                "permissionModifyGroup": null
+
+            }
+
+        }
+
+    ],
+
+    "message": null,
+
+    "errors": null
+
+}
+
+
+
+{
+
+    "status": "OK",
+
+    "data": [
+
+        {
+
+            "id": 53,
+
+            "name": "Farmacia",
+
+            "itemType": {
+
+                "id": 29,
+
+                "identifier": "G_DOC",
+
+                "description": "Grupo dos Documentos",
+
+                "permissionModifyGroup": true
+
+            },
+
+            "keyTranslate": null,
+
+            "parentGroup": {
+
+                "id": 52,
+
+                "name": "Ambulatório",
+
+                "itemType": {
+
+                    "id": 10,
+
+                    "identifier": "G_REP_DOC",
+
+                    "description": "Grupo dos Repositório dos Documentos",
+
+                    "permissionModifyGroup": true
+
+                },
+
+                "keyTranslate": null,
+
+                "parentGroup": {
+
+                    "id": 11,
+
+                    "name": "Repositório Local",
+
+                    "itemType": {
+
+                        "id": 9,
+
+                        "identifier": "R_REP_DOC",
+
+                        "description": "Raiz dos Repositórios dos Documentos",
+
+                        "permissionModifyGroup": false
+
+                    },
+
+                    "keyTranslate": null,
+
+                    "parentGroup": null,
+
+                    "fieldsOnGroup": null,
+
+                    "editable": false
+
+                },
+
+                "fieldsOnGroup": null,
+
+                "editable": true
+
+            },
+
+            "fieldsOnGroup": null,
+
+            "editable": true
+
+        }
+
+    ],
+
+    "message": null,
+
+    "errors": null
+
+}
+
+{status: "OK", data: [{id: 53, name: "Farmacia",…}], message: null, errors: null}
+
+data
+
+: 
+
+[{id: 53, name: "Farmacia",…}]
+
+0
+
+: 
+
+{id: 53, name: "Farmacia",…}
+
+editable
+
+: 
+
+true
+
+fieldsOnGroup
+
+: 
+
+null
+
+id
+
+: 
+
+53
+
+itemType
+
+: 
+
+{id: 29, identifier: "G_DOC", description: "Grupo dos Documentos", permissionModifyGroup: true}
+
+description
+
+: 
+
+"Grupo dos Documentos"
+
+id
+
+: 
+
+29
+
+identifier
+
+: 
+
+"G_DOC"
+
+permissionModifyGroup
+
+: 
+
+true
+
+keyTranslate
+
+: 
+
+null
+
+name
+
+: 
+
+"Farmacia"
+
+parentGroup
+
+: 
+
+{id: 52, name: "Ambulatório",…}
+
+editable
+
+: 
+
+true
+
+fieldsOnGroup
+
+: 
+
+null
+
+id
+
+: 
+
+52
+
+itemType
+
+: 
+
+{id: 10, identifier: "G_REP_DOC", description: "Grupo dos Repositório dos Documentos",…}
+
+description
+
+: 
+
+"Grupo dos Repositório dos Documentos"
+
+id
+
+: 
+
+10
+
+identifier
+
+: 
+
+"G_REP_DOC"
+
+permissionModifyGroup
+
+: 
+
+true
+
+keyTranslate
+
+: 
+
+null
+
+name
+
+: 
+
+"Ambulatório"
+
+parentGroup
+
+: 
+
+{id: 11, name: "Repositório Local",…}
+
+editable
+
+: 
+
+false
+
+fieldsOnGroup
+
+: 
+
+null
+
+id
+
+: 
+
+11
+
+itemType
+
+: 
+
+{id: 9, identifier: "R_REP_DOC", description: "Raiz dos Repositórios dos Documentos",…}
+
+description
+
+: 
+
+"Raiz dos Repositórios dos Documentos"
+
+id
+
+: 
+
+9
+
+identifier
+
+: 
+
+"R_REP_DOC"
+
+permissionModifyGroup
+
+: 
+
+false
+
+keyTranslate
+
+: 
+
+null
+
+name
+
+: 
+
+"Repositório Local"
+
+parentGroup
+
+: 
+
+null
+
+errors
+
+: 
+
+null
+
+message
+
+: 
+
+null
+
+status
+
+: 
+
+"OK"
+
+{status: "CONFLICT", data: {success: [],…},…}
+
+data
+
+: 
+
+{success: [],…}
+
+errors
+
+: 
+
+["Erro ao importar o arquivo "5.documents_ficha_ambulatorial_1_REV_2026.edt" de tipo "Documento""]
+
+0
+
+: 
+
+"Erro ao importar o arquivo \"5.documents_ficha_ambulatorial_1_REV_2026.edt\" de tipo \"Documento\""
+
+information
+
+: 
+
+[]
+
+success
+
+: 
+
+[]
+
+errors
+
+: 
+
+null
+
+message
+
+: 
+
+"Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!"
+
+status
+
+: 
+
+"CONFLICT"
+
+
+
+{
+
+    "status": "CONFLICT",
+
+    "data": {
+
+        "success": [],
+
+        "errors": [
+
+            "Erro ao importar o arquivo \"5.documents_ficha_ambulatorial_1_REV_2026.edt\" de tipo \"Documento\""
+
+        ],
+
+        "information": []
+
+    },
+
+    "message": "Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!",
+
+    "errors": null
+
+}

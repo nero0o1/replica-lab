@@ -1,0 +1,26 @@
+[
+  {
+    "time": "2026-02-25T04:45:35.275Z",
+    "title": "UPLOAD_ATTEMPT",
+    "data": {
+      "url": "designer/api/import/uploadFiles/53",
+      "method": "POST"
+    }
+  },
+  {
+    "time": "2026-02-25T04:45:35.379Z",
+    "title": "ERRO_200_CONFLICT",
+    "data": {
+      "status": "CONFLICT",
+      "data": {
+        "success": [],
+        "errors": [
+          "O arquivo não é válido! O arquivo esperado é do tipo Documento."
+        ],
+        "information": []
+      },
+      "message": "Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!",
+      "errors": null
+    }
+  }
+]

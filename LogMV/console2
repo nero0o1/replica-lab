@@ -1,0 +1,87 @@
+// [MV-Antigravity] Analisador Forense de ZIP In-Browser (Protocolo VT-3)
+(async function () {
+    console.log("[ANTIGRAVITY] Injetando motor de análise de pacotes na interface...");
+
+    // 1. Injeta a biblioteca JSZip no navegador
+    if (!window.JSZip) {
+        await new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js';
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+        });
+        console.log("✅ Motor de Descompressão JSZip acoplado com sucesso.");
+    }
+
+    // 2. Cria um botão de upload flutuante para a análise
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.zip';
+    input.style.cssText = 'position:fixed; top:20px; right:20px; z-index:999999; padding:10px; background:#000; color:#0f0; border:1px solid #0f0; cursor:pointer; font-family:monospace;';
+    input.title = "Selecione o ZIP para análise";
+    document.body.appendChild(input);
+
+    console.log("👉 AÇÃO REQUERIDA: Um botão preto e verde apareceu no canto superior direito. Selecione seu ZIP nele.");
+
+    // 3. Processa o arquivo selecionado
+    input.addEventListener('change', async function (e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        console.groupCollapsed(`\n🔎 [RAIO-X VT-3] Dissecando anatomia de: ${file.name}`);
+        try {
+            const zip = new JSZip();
+            const contents = await zip.loadAsync(file);
+
+            const files = Object.keys(contents.files);
+            console.log(`📦 Total de artefatos no pacote: ${files.length}`);
+
+            for (let filename of files) {
+                const zipEntry = contents.files[filename];
+                console.log(`\n├── Artefato: ${filename}`);
+
+                // Ignora pastas vazias e foca nos manifestos (.edt, .json, .xml)
+                if (!zipEntry.dir && (filename.endsWith('.edt') || filename.includes('document'))) {
+                    const contentStr = await zipEntry.async("string");
+
+                    console.log(`│   └── [FRAGMENTO DE CABEÇALHO (150 chars)]`);
+                    console.log(`│       ${contentStr.substring(0, 150).replace(/\r?\n|\r/g, '')}...`);
+
+                    // Validação de assinatura DTO
+                    if (contentStr.includes('br.com.mv.liberty.editor3')) {
+                        console.log(`│   ✅ [INTEGRIDADE CONFIRMADA]: Assinatura do Liberty Editor 3 detectada.`);
+                    } else if (contentStr.includes('CD_PROPRIEDADE')) {
+                        console.log(`│   ⚠️ [ALERTA]: Arquivo possui estrutura legada (Editor 2/Flow), mas sem o wrapper do Liberty.`);
+                    } else {
+                        console.log(`│   ❌ [FALHA CRÍTICA]: Nenhuma assinatura estrutural da MV foi encontrada. O servidor rejeitará este artefato na Camada 0.`);
+                    }
+                }
+            }
+        } catch (err) {
+            console.error("Falha irrecuperável ao abrir o pacote ZIP:", err);
+        }
+        console.groupEnd();
+
+        // Reseta o input para permitir nova leitura
+        input.value = '';
+    });
+})();
+VM346: 3[ANTIGRAVITY] Injetando motor de análise de pacotes na interface...
+Promise {
+    <pending>}
+        VM346:14 ✅ Motor de Descompressão JSZip acoplado com sucesso.
+        VM346:25 👉 AÇÃO REQUERIDA: Um botão preto e verde apareceu no canto superior direito. Selecione seu ZIP nele.
+        VM346:32
+        🔎 [RAIO-X VT-3] Dissecando anatomia de: ficha_ambulatorial_1_REV_2026.zip
+        VM346:38 📦 Total de artefatos no pacote: 2
+        VM346:42
+        ├── Artefato: 1.editor.version.edt
+        VM346:48 │   └── [FRAGMENTO DE CABEÇALHO (150 chars)]
+        VM346:49 │       2025.1.0-RC9...
+        VM346:57 │   ❌ [FALHA CRÍTICA]: Nenhuma assinatura estrutural da MV foi encontrada. O servidor rejeitará este artefato na Camada 0.
+        VM346:42
+        ├── Artefato: 5.documents_ficha_ambulatorial_1_REV_2026.edt
+        VM346:48 │   └── [FRAGMENTO DE CABEÇALHO (150 chars)]
+        VM346:49 │       {"name":  "ficha_ambulatorial_1",    "identifier":  "ficha_ambulatorial_1_REV_2026",    "type":  "DOC",    "code":  813,    "group":  {...
+        VM346:57 │   ❌ [FALHA CRÍTICA]: Nenhuma assinatura estrutural da MV foi encontrada. O servidor rejeitará este artefato na Camada 0.

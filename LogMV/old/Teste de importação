@@ -1,0 +1,253 @@
+*** Realizei teste de importação E mapeei O comportamento da ferramenta Com um documento errado e com um documento correto .***
+﻿
+VM254:10 
+(index)
+Value
+status	'INTERNAL_SERVER_ERROR'
+uuid	'1d9d5d91-c4fc-4a98-825c-9bfb362d0965'
+code	null
+message	'O sistema não concluiu a operação por conta de um …e o código: 1d9d5d91-c4fc-4a98-825c-9bfb362d0965.'
+errors	Array(0)
+Object
+code
+: 
+null
+errors
+: 
+[]
+message
+: 
+"O sistema não concluiu a operação por conta de um problema interno. Entre em contato com a MV e informe o código: 1d9d5d91-c4fc-4a98-825c-9bfb362d0965."
+status
+: 
+"INTERNAL_SERVER_ERROR"
+uuid
+: 
+"1d9d5d91-c4fc-4a98-825c-9bfb362d0965"
+[[Prototype]]
+: 
+Object
+VM254:51  [SISTEMA FORÇADO]: Tente o upload novamente. Se houver conflito de nome, eu pegarei a Constraint.
+VM240:35  [FORM_DATA_APPEND]: files
+VM240:37  > Arquivo: COMBO_TESTE0.zip (9394 bytes)
+VM240:40  [AVISO]: Nomes de arquivo em minúsculo podem causar erro de importação no Linux/JBoss.
+VM229:6 [EVIDÊNCIA CAPTURADA]: UPLOAD_ATTEMPT
+VM229:6 [EVIDÊNCIA CAPTURADA]: ERRO_200_CONFLICT
+VM254:25  🛑 ÁTOMO DO CONFLITO ENCONTRADO
+VM254:31 Mensagem do Servidor: Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!
+VM254:39 Validações de Campo Rejeitadas:
+VM254:40 
+(index)
+Value
+0	'O arquivo não é válido! O arquivo esperado é do tipo Documento.'
+Array(1)
+0
+: 
+"O arquivo não é válido! O arquivo esperado é do tipo Documento."
+length
+: 
+1
+[[Prototype]]
+: 
+Array(0)
+VM240:35  [FORM_DATA_APPEND]: files
+VM240:37  > Arquivo: 0006_46_APAC.zip (2780788 bytes)
+VM240:40  [AVISO]: Nomes de arquivo em minúsculo podem causar erro de importação no Linux/JBoss.
+VM229:6 [EVIDÊNCIA CAPTURADA]: UPLOAD_ATTEMPT
+VM229:6 [EVIDÊNCIA CAPTURADA]: ERRO_200_CONFLICT
+VM254:25  🛑 ÁTOMO DO CONFLITO ENCONTRADO
+VM254:31 Mensagem do Servidor: Arquivo(s) enviado(s) com sucesso. Mas há erros na importação dos arquivos!
+VM254:39 Validações de Campo Rejeitadas:
+VM254:40 
+(index)
+Value
+0	'Nome de documento duplicado. > Cabeçalho SES GO <'
+1	'Erro ao importar o arquivo "5.documents_APAC0.edt"…e.setValue(String)" because "imported" is null ).'
+Array(2)
+0
+: 
+"Nome de documento duplicado.  > Cabeçalho SES GO <"
+1
+: 
+"Erro ao importar o arquivo \"5.documents_APAC0.edt\" de tipo \"Documento\". Identificador: > APAC <: \r\n Erro durante a criação dos metadados ( Cannot invoke \"br.com.mv.liberty.editor3.domain.FieldPropertyValue.setValue(String)\" because \"imported\" is null )."
+length
+: 
+2
+[[Prototype]]
+: 
+Array(0)
+﻿
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/import/uploadFiles/53", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "max-age=0",
+    "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryFHDSvvXIRwSjlwLa",
+    "priority": "u=1, i",
+    "route": "/documents/",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+  "body": "------WebKitFormBoundaryFHDSvvXIRwSjlwLa\r\nContent-Disposition: form-data; name=\"files\"; filename=\"0010_93_AIH_SES.zip\"\r\nContent-Type: application/x-zip-compressed\r\n\r\n\r\n------WebKitFormBoundaryFHDSvvXIRwSjlwLa--\r\n",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/groups/52/children", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "route": "/documents/",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/documents?groupId=53", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "route": "/documents/",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/documents/paginated?pageNumber=1&pageSize=10&sortBy=id&groupId=53&type=DOC", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "route": "/documents/",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/import/uploadFiles/53", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "max-age=0",
+    "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryU8v80us0R1YMLGGf",
+    "priority": "u=1, i",
+    "route": "/documents/",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+  "body": "------WebKitFormBoundaryU8v80us0R1YMLGGf\r\nContent-Disposition: form-data; name=\"files\"; filename=\"0014_183_ficha_ambulatorial_1.zip\"\r\nContent-Type: application/x-zip-compressed\r\n\r\n\r\n------WebKitFormBoundaryU8v80us0R1YMLGGf--\r\n",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/groups/52/children", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "route": "/documents/",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/documents?groupId=53", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "route": "/documents/",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}); ;
+fetch("https://mvtst1.saude.go.gov.br/editor/designer/api/documents/paginated?pageNumber=1&pageSize=10&sortBy=id&groupId=53&type=DOC", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "priority": "u=1, i",
+    "route": "/documents/",
+    "sec-ch-ua": "\"Not:A-Brand\";v=\"99\", \"Google Chrome\";v=\"145\", \"Chromium\";v=\"145\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin"
+  },
+  "referrer": "https://mvtst1.saude.go.gov.br/editor/index.html",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+});

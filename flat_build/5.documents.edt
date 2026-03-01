@@ -1,0 +1,116 @@
+{
+    "name":  "combo teste replica",
+    "identifier":  "COMBO_REPLICA_V1",
+    "type":  "DOC",
+    "group":  {
+                  "name":  "teste",
+                  "id":  361,
+                  "itemType":  {
+                                   "description":  "Grupo dos Documentos",
+                                   "id":  29,
+                                   "identifier":  "G_DOC"
+                               }
+              },
+    "data":  {
+                 "identifier":  "COMBO_REPLICA_V1",
+                 "groupId":  361,
+                 "name":  "combo teste replica",
+                 "propertyDocumentValues":  [
+
+                                            ],
+                 "itemType":  {
+                                  "description":  "Documento",
+                                  "id":  13,
+                                  "identifier":  "DOC"
+                              },
+                 "id":  999141
+             },
+    "version":  {
+                    "id":  999141,
+                    "versionStatus":  "PUBLISHED",
+                    "hash":  "5eec82e5f69bea999b724ec831cab351",
+                    "active":  true,
+                    "vlVersion":  1,
+                    "layouts":  [
+                                    {
+                                        "description":  null,
+                                        "width": 900.0,
+                                        "height": 2000.0,
+                                        "versionId":  999141,
+                                        "content":  "{\"pageBody\":{\"children\":{\"COMBOBOX\":{\"metadado\":3253,\"identifier\":\"COMBOBOX\",\"visualization\":\"ComboBox\",\"type\":\"combobox\",\"visualizationType\":\"combobox\",\"name\":\"combobox\",\"style\":{\"fontFamily\":\"Arial\",\"fontSize\":\"12px\",\"color\":\"#000\",\"lineHeight\":1,\"zIndex\":1},\"x\":647.0,\"y\":334.0,\"width\":80.0,\"height\":28.0,\"id\":\"COMBOBOX\"}},\"style\":{\"border\":\"none\",\"width\":900.0,\"height\":2000.0},\"type\":\"pageBody\"}}",
+                                        "layoutType":  {
+                                                           "id":  1,
+                                                           "identifier":  "TELA",
+                                                           "name":  "Tela"
+                                                       },
+                                        "rules":  [
+
+                                                  ],
+                                        "ioFieldDTOS":  [
+                                                            {
+                                                                "reprocessed":  false,
+                                                                "active":  true,
+                                                                "fieldParentId":  6,
+                                                                "fieldParentIdentifier":  "G_CAM",
+                                                                "name":  "COMBOBOX",
+                                                                "identifier":  "COMBOBOX",
+                                                                "groupId":  6,
+                                                                "hash":  null,
+                                                                "id":  3253,
+                                                                "itemType":  {
+                                                                                 "description":  "Campo",
+                                                                                 "id":  8,
+                                                                                 "identifier":  "CAM"
+                                                                             },
+                                                                "visualizationType":  {
+                                                                                          "id":  3,
+                                                                                          "identifier":  "COMBOBOX",
+                                                                                          "description":  "ComboBox"
+                                                                                      },
+                                                                "fieldPropertyValues":  [
+                                                                                            {
+                                                                                                "property":  {
+                                                                                                                 "id":  2,
+                                                                                                                 "identifier":  "lista_valores"
+                                                                                                             },
+                                                                                                "fieldValues":  [
+                                                                                                                    "OpÃ§Ã£o 1",
+                                                                                                                    "OpÃ§Ã£o 2"
+                                                                                                                ],
+                                                                                                "hash":  null
+                                                                                            },
+                                                                                            {
+                                                                                                "property":  {
+                                                                                                                 "id":  8,
+                                                                                                                 "identifier":  "obrigatorio"
+                                                                                                             },
+                                                                                                "value":  "true",
+                                                                                                "hash":  "b326b5062b2f0e69046810717534cb09"
+                                                                                            },
+                                                                                            {
+                                                                                                "property":  {
+                                                                                                                 "id":  38,
+                                                                                                                 "identifier":  "cascata_regra"
+                                                                                                             },
+                                                                                                "value":  "true",
+                                                                                                "hash":  "b326b5062b2f0e69046810717534cb09"
+                                                                                            },
+                                                                                            {
+                                                                                                "property":  {
+                                                                                                                 "id":  7,
+                                                                                                                 "identifier":  "editavel"
+                                                                                                             },
+                                                                                                "value":  "true",
+                                                                                                "hash":  "b326b5062b2f0e69046810717534cb09"
+                                                                                            }
+                                                                                        ]
+                                                            }
+                                                        ]
+                                    }
+                                ],
+                    "documentId":  999141,
+                    "documentName":  "combo teste replica",
+                    "published":  true,
+                    "documentIdentifier":  "COMBO_REPLICA_V1"
+                }
+}
