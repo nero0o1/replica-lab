@@ -1,4 +1,4 @@
-# Relatório de Extração Comportamental (Behavioral Patterns)
+# Relatório de Extração Compor tamental (Behavioral Patterns)
 
 Este documento consolida os padrões lógicos extraídos das amostras de campo (`.edt` e JSON) para fundamentar o `RuleLexer`.
 

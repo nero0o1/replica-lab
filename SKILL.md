@@ -64,3 +64,25 @@ This ensures:
 - **Hash Stability**: MD5 chain is intact.
 - **Field Sovereignty**: No labels were lost during component injection.
 - **Constraint Compliance**: All `tamanho` limits are respected.
+
+## 6. Export and Packaging (Flow Forms / Editor 3)
+
+### [REGRA DE COMPACTAÇÃO FLOW FORMS]
+Ao exportar um formulário para o MV Soul (Flow Forms/Editor 3), o empacotador ZIP NUNCA deve utilizar a extensão .json.
+
+- **Manifesto de Versão (Obrigatório)**: O pacote DEVE conter o arquivo `1.editor.version.edt` contendo a string de versão alvo (ex: `2025.1.0-RC9`). O conteúdo deve ser apenas o texto puro da versão, sem chaves JSON.
+- **Payload Principal**: O documento principal deve ser salvo como `5.documents_{identifier}.edt`.
+- **Componentes Auxiliares**: Cabeçalhos e Rodapés, se existirem, devem usar os prefixos `3.headers_{nome}.edt` e `4.footers_{nome}.edt`.
+- **Extensão Estrita**: Utilizar a extensão `.edt` para todos os artefatos dentro do ZIP.
+
+O motor de importação do MV opera sob um pipeline de leitura sequencial onde o prefixo numérico (1., 3., 4., 5.) dita a ordem de injeção no banco Oracle.
+
+## 7. Sanitização de DTO (Prevenção de Poison Pills)
+
+### [REGRA DE SANITIZAÇÃO DE EXPORTAÇÃO MV FLOW FORMS]
+Antes de serializar o JSON para o arquivo .edt, o motor deve aplicar as seguintes mutações para evitar erros de persistência (Hibernate/Oracle) e conflitos de chaves:
+
+1.  **Anular Chaves Primárias**: Definir como `null` os campos `code`, `documentId`, `versionId`, `layoutId`, `id` (em objetos de layout/versão). O destino deve gerar seus próprios IDs via Sequences.
+2.  **Neutralizar Localização de Pasta**: Definir `groupId` como `null` e o objeto `group` com `id: null`. Isso permite que o documento seja importado na pasta selecionada pelo usuário na interface.
+3.  **Sanitização de Metadados**: Se os IDs de propriedade no ambiente de destino forem incertos, omitir o bloco `propertyDocumentValues` inteiramente. O Flow Forms reconstruirá os metadados nativamente.
+4.  **Identificadores Naturais**: O sistema reconhece o documento pelo campo `identifier` (Chave Natural). Este deve ser preservado e único.

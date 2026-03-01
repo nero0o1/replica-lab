@@ -77,7 +77,9 @@ A estrutura abaixo foi desenhada para separar rigorosamente a lógica pura (conh
 ├─── tests/                      # A Barreira de Qualidade
 │   ├── unit/                   # Testes de Componentes.
 │   └── integration/            # Testes de Ponta a Ponta.
-└── SKILL.md
+├───SKILL.md
+├─── EDITOR2ANALISIS.md
+└─── EDITOR3_ARCHITECTURE_SPEC.md
 ```
 
 ---
